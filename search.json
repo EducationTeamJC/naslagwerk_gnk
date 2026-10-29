@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Naslagwerk Statistiek",
+    "section": "",
+    "text": "Voorwoord\nDit naslagwerk hoort bij het statistiekonderwijs in het blok Basis van Gezondheid en Ziekte. Het is bedoeld als compacte, academische naslag naast hoorcollege, werkcollege en toetsing.",
+    "crumbs": [
+      "Voorwoord"
+    ]
+  },
+  {
+    "objectID": "index.html#opbouw",
+    "href": "index.html#opbouw",
+    "title": "Naslagwerk Statistiek",
+    "section": "Opbouw",
+    "text": "Opbouw\n\nLeerdoelen — wat je aan het eind van dit onderdeel moet kunnen\n\nInhoud — uitleg, definities en intermezzo’s (wordt aangevuld)",
+    "crumbs": [
+      "Voorwoord"
+    ]
+  },
+  {
+    "objectID": "index.html#kadertjes-in-de-tekst",
+    "href": "index.html#kadertjes-in-de-tekst",
+    "title": "Naslagwerk Statistiek",
+    "section": "Kadertjes in de tekst",
+    "text": "Kadertjes in de tekst\n\nDefinitie — kernbegrip\n\nIntermezzo — extra uitleg of verdieping, geen verplichte stof tenzij anders aangegeven",
+    "crumbs": [
+      "Voorwoord"
+    ]
+  },
+  {
+    "objectID": "01-leerdoelen.html",
+    "href": "01-leerdoelen.html",
+    "title": "1  Leerdoelen",
+    "section": "",
+    "text": "1.1 Hoofdleerdoel\nDe student kan beschrijvende statistiek, tabellen en grafieken gebruiken om data samen te vatten en de belangrijkste patronen, verschillen en trends te herkennen.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Leerdoelen</span>"
+    ]
+  },
+  {
+    "objectID": "01-leerdoelen.html#deelleerdoelen",
+    "href": "01-leerdoelen.html#deelleerdoelen",
+    "title": "1  Leerdoelen",
+    "section": "1.2 Deelleerdoelen",
+    "text": "1.2 Deelleerdoelen\n\n\nHet verschil uitleggen tussen beschrijvende statistiek (data samenvatten) en inferentiële statistiek (conclusies trekken over een populatie).\nMaten van centrale tendentie (gemiddelde, mediaan, modus) en spreiding (spreidingsbreedte, standaarddeviatie) benoemen en toepassen op een eenvoudige dataset.\nVerschillende typen grafieken (staafdiagram, histogram, boxplot, spreidingsdiagram/lijngrafiek) herkennen en aangeven welk type bij welk soort data past.\nEen grafiek of tabel uit een wetenschappelijk artikel correct aflezen (wat staat er op de assen, wat betekenen foutbalken).\nVeelvoorkomende valkuilen in grafische weergave herkennen (bijv. afgesneden y-as, misleidende schaal, verwarring tussen absolute en relatieve getallen).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Leerdoelen</span>"
+    ]
+  },
+  {
+    "objectID": "01-leerdoelen.html#werkcollege-toepassing",
+    "href": "01-leerdoelen.html#werkcollege-toepassing",
+    "title": "1  Leerdoelen",
+    "section": "1.3 Werkcollege (toepassing)",
+    "text": "1.3 Werkcollege (toepassing)\nIn het werkcollege oefen je dezelfde kernvaardigheden in de context van een wetenschappelijk artikel:\n\nDoel, onderzoeksvraag en studieopzet uit een artikel halen en beschrijven.\n\nIn figuren/tabellen aanwijzen welke beschrijvende maten gebruikt zijn.\n\nEen grafiek (bijv. verandering over tijd) interpreteren: trend, groepsverschillen.\n\nEen eenvoudige grafiek schetsen om informatie samen te vatten.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Leerdoelen</span>"
+    ]
+  },
+  {
+    "objectID": "02-inhoud.html",
+    "href": "02-inhoud.html",
+    "title": "2  Inhoud",
+    "section": "",
+    "text": "Dit hoofdstuk vullen jullie zelf aan. Hieronder staan twee voorbeelden van kaders die je kunt kopiëren.\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\n\n\n\n\n\nOpmerkingDefinitie\n\n\n\nLorem ipsum is een placeholdertekst die vaak gebruikt wordt om de vorm van een alinea te tonen zonder betekenisvolle inhoud. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\n\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus.\n\nIntermezzo — extra uitleg\nDit kader is bedoeld voor extra uitleg of een kort intermezzo: verdieping die niet per se tot de kernstof behoort. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Inhoud</span>"
+    ]
+  }
+]
