@@ -1,0 +1,45 @@
+/* Content callouts only — theme look comes from Bootstrap cosmo */
+
+.leerdoelen {
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-left: 4px solid #2780e3;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0 1.5rem 0;
+}
+
+.leerdoelen h3,
+.leerdoelen p:first-child {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.leerdoelen ol,
+.leerdoelen ul {
+  margin-bottom: 0;
+}
+
+.intermezzo {
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+  border-left: 4px solid #3fb618;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0 1.5rem 0;
+}
+
+.intermezzo > :first-child {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.intermezzo > :last-child {
+  margin-bottom: 0;
+}
+
+.blok-meta {
+  color: #7b8a8b;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+}
