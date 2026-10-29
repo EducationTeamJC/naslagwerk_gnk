@@ -1,0 +1,115 @@
+/*-- scss:defaults --*/
+$blok-navy: #1a365d;
+$blok-accent: #2c5282;
+$blok-muted: #4a5568;
+$blok-bg: #f7fafc;
+$blok-border: #cbd5e0;
+
+/*-- scss:rules --*/
+/* Blokboek-uitstraling: sober, academisch */
+
+body {
+  color: #1a202c;
+  line-height: 1.55;
+}
+
+.quarto-title-block .title {
+  font-family: "Source Serif 4", "Georgia", serif;
+  color: $blok-navy;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.quarto-title-block .subtitle {
+  color: $blok-muted;
+  font-weight: 400;
+}
+
+h1, h2, h3 {
+  font-family: "Source Serif 4", "Georgia", serif;
+  color: $blok-navy;
+}
+
+h1 {
+  border-bottom: 2px solid $blok-navy;
+  padding-bottom: 0.35rem;
+  margin-top: 2rem;
+}
+
+h2 {
+  border-bottom: 1px solid $blok-border;
+  padding-bottom: 0.25rem;
+}
+
+.sidebar-title {
+  font-family: "Source Serif 4", "Georgia", serif;
+  color: $blok-navy;
+  font-weight: 600;
+}
+
+div.callout-note {
+  border-left-color: $blok-accent;
+}
+
+div.callout-warning {
+  border-left-color: #c05621;
+}
+
+div.callout-tip {
+  border-left-color: #2f855a;
+}
+
+div.callout-important {
+  border-left-color: $blok-navy;
+}
+
+.leerdoelen {
+  background: $blok-bg;
+  border: 1px solid $blok-border;
+  border-left: 4px solid $blok-navy;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0 1.5rem 0;
+}
+
+.leerdoelen h3,
+.leerdoelen p:first-child {
+  margin-top: 0;
+  color: $blok-navy;
+  font-weight: 600;
+}
+
+.leerdoelen ol,
+.leerdoelen ul {
+  margin-bottom: 0;
+}
+
+/* Extra uitleg / intermezzo (niet verplichte kernstof) */
+.intermezzo {
+  background: #f0fff4;
+  border: 1px solid #c6f6d5;
+  border-left: 4px solid #2f855a;
+  padding: 0.9rem 1.1rem;
+  margin: 1.2rem 0 1.5rem 0;
+}
+
+.intermezzo > :first-child {
+  margin-top: 0;
+  color: #276749;
+  font-weight: 600;
+}
+
+.intermezzo > :last-child {
+  margin-bottom: 0;
+}
+
+.blok-meta {
+  color: $blok-muted;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid $blok-border;
+}
+
+.math.display {
+  margin: 1.25rem 0;
+}

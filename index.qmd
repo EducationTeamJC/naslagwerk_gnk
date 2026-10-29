@@ -1,0 +1,17 @@
+# Voorwoord {.unnumbered}
+
+::: {.blok-meta}
+**Blok:** Basis van Gezondheid en Ziekte · **Jaar:** 2026–2027 · Geneeskunde
+:::
+
+Dit naslagwerk hoort bij het statistiekonderwijs in het blok *Basis van Gezondheid en Ziekte*. Het is bedoeld als compacte, academische naslag naast hoorcollege, werkcollege en toetsing.
+
+## Opbouw
+
+1. **Leerdoelen** — wat je aan het eind van dit onderdeel moet kunnen  
+2. **Inhoud** — uitleg, definities en intermezzo’s (wordt aangevuld)
+
+## Kadertjes in de tekst
+
+- **Definitie** — kernbegrip  
+- **Intermezzo** — extra uitleg of verdieping, geen verplichte stof tenzij anders aangegeven  

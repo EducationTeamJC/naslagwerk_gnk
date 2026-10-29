@@ -1,0 +1,28 @@
+# Leerdoelen
+
+::: {.blok-meta}
+Opgesteld door Dorieke Brink Kwakkel en Jeppe Severens · 2026–2027
+:::
+
+## Hoofdleerdoel
+
+De student kan **beschrijvende statistiek**, **tabellen** en **grafieken** gebruiken om data samen te vatten en de belangrijkste **patronen**, **verschillen** en **trends** te herkennen.
+
+## Deelleerdoelen
+
+::: {.leerdoelen}
+1. Het verschil uitleggen tussen beschrijvende statistiek (data samenvatten) en inferentiële statistiek (conclusies trekken over een populatie).
+2. Maten van centrale tendentie (gemiddelde, mediaan, modus) en spreiding (spreidingsbreedte, standaarddeviatie) benoemen en toepassen op een eenvoudige dataset.
+3. Verschillende typen grafieken (staafdiagram, histogram, boxplot, spreidingsdiagram/lijngrafiek) herkennen en aangeven welk type bij welk soort data past.
+4. Een grafiek of tabel uit een wetenschappelijk artikel correct aflezen (wat staat er op de assen, wat betekenen foutbalken).
+5. Veelvoorkomende valkuilen in grafische weergave herkennen (bijv. afgesneden y-as, misleidende schaal, verwarring tussen absolute en relatieve getallen).
+:::
+
+## Werkcollege (toepassing)
+
+In het werkcollege oefen je dezelfde kernvaardigheden in de context van een wetenschappelijk artikel:
+
+- Doel, onderzoeksvraag en studieopzet uit een artikel halen en beschrijven.  
+- In figuren/tabellen aanwijzen welke beschrijvende maten gebruikt zijn.  
+- Een grafiek (bijv. verandering over tijd) interpreteren: trend, groepsverschillen.  
+- Een eenvoudige grafiek schetsen om informatie samen te vatten.

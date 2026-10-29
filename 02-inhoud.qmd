@@ -1,0 +1,21 @@
+# Inhoud
+
+*Dit hoofdstuk vullen jullie zelf aan. Hieronder staan twee voorbeelden van kaders die je kunt kopiëren.*
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+::: {.callout-note}
+## Definitie
+
+**Lorem ipsum** is een placeholdertekst die vaak gebruikt wordt om de vorm van een alinea te tonen zonder betekenisvolle inhoud. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+:::
+
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Curabitur pretium tincidunt lacus.
+
+::: {.intermezzo}
+### Intermezzo — extra uitleg
+
+Dit kader is bedoeld voor *extra uitleg* of een kort intermezzo: verdieping die niet per se tot de kernstof behoort. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+:::
+
+<!-- Vanaf hier aanvullen -->

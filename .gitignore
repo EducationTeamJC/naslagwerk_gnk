@@ -1,0 +1,7 @@
+/_book/
+/.quarto/
+*.html
+!styles/**
+.Rhistory
+.Rproj.user/
+**/*.quarto_ipynb
