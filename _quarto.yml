@@ -7,6 +7,8 @@ book:
   subtitle: "Beschrijvende statistiek, tabellen en grafieken"
   author: "Dorieke Brink Kwakkel & Jeppe Severens"
   date: "2026–2027"
+  site-url: https://educationteamjc.github.io/naslagwerk_gnk/
+  repo-url: https://github.com/EducationTeamJC/naslagwerk_gnk
   chapters:
     - index.qmd
     - 01-leerdoelen.qmd
@@ -34,17 +36,6 @@ format:
       text: |
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
         <style>body, h1, h2, h3, .quarto-title-block .title { font-family: "Source Serif 4", Georgia, serif; }</style>
-  pdf:
-    documentclass: report
-    papersize: a4
-    geometry:
-      - margin=2.5cm
-    fontsize: 11pt
-    linestretch: 1.15
-    toc: true
-    number-sections: true
-    colorlinks: true
-    include-in-header: styles/blokboek-header.tex
 
 lang: nl
 
@@ -52,3 +43,4 @@ execute:
   echo: false
   warning: false
   message: false
+  freeze: auto
