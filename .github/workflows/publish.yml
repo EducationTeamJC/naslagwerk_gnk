@@ -1,7 +1,7 @@
-# Optional: only run from the Actions tab (not on every push).
-# Normal publish for this project: quarto publish gh-pages
 on:
   workflow_dispatch:
+  push:
+    branches: main
 
 name: Quarto Publish
 
@@ -27,7 +27,11 @@ jobs:
           pkgs <- c("ggplot2", "patchwork", "knitr", "rmarkdown")
           install.packages(pkgs, repos = "https://cloud.r-project.org")
           missing <- setdiff(pkgs, rownames(installed.packages()))
-          if (length(missing)) stop("Missing packages: ", paste(missing, collapse = ", "))
+          if (length(missing)) {
+            stop("Missing packages after install: ", paste(missing, collapse = ", "))
+          }
+          stopifnot(requireNamespace("rmarkdown", quietly = TRUE))
+          message("OK: ", paste(pkgs, collapse = ", "))
         shell: Rscript {0}
 
       - name: Render and Publish
