@@ -42,9 +42,11 @@ De student kan **beschrijvende statistiek**, **tabellen** en **grafieken** gebru
 4. Een grafiek of tabel uit een wetenschappelijk artikel correct aflezen (wat staat er op de assen, wat betekenen foutbalken).
 5. Veelvoorkomende valkuilen in grafische weergave herkennen (bijv. afgesneden y-as, misleidende schaal, verwarring tussen absolute en relatieve getallen).
 
-## Statistical literacy in de geneeskunde
+## Statistiek in de geneeskunde
 
-Een gemiddelde of een daling in een figuur beschrijft niet automatisch de hele verdeling of het effect van een behandeling. Statistical literacy betekent dat je kunt nagaan wat er is gemeten, hoe dat is samengevat, welke patronen je ziet, en welke informatie nog ontbreekt.
+In de geneeskunde kom je voortdurend samenvattingen van gegevens tegen: een gemiddelde in een artikel, een daling in een figuur, een percentage in een abstract. Die getallen helpen je om patronen te zien, maar ze vertellen niet automatisch het hele verhaal. Een daling in een figuur bewijst bijvoorbeeld nog niet dat een behandeling werkt, en één gemiddelde beschrijft nog niet hoe sterk patiënten onderling verschillen.
+
+In dit naslagwerk oefen je daarom vooral om te kijken: wat is er gemeten, hoe is dat samengevat, welk patroon zie je, en welke informatie ontbreekt nog?
 
 ```{r}
 #| label: fig-daling
@@ -69,26 +71,26 @@ ggplot(df_bp, aes(moment, bd)) +
   )
 ```
 
-Die daling alleen bewijst niet dat de behandeling werkt. Er ontbreekt onder meer een vergelijkingsgroep, informatie over spreiding tussen patiënten, en zekerheid dat het verschil niet door tijd of andere zorg komt. Eerst beschrijven wat je ziet; daarna pas (voorzichtig) concluderen.
+Die daling alleen bewijst niet dat de behandeling werkt. Er ontbreekt onder meer een vergelijkingsgroep, informatie over spreiding tussen patiënten, en zekerheid dat het verschil niet door tijd of andere zorg komt. Eerst beschrijf je wat je ziet. Daarna pas trek je voorzichtig een conclusie.
 
 ### Beschrijven en conclusies trekken
 
-**Beschrijvende statistiek** vat de gegevens samen die je hebt gemeten: gemiddelde, spreiding, tabel of grafiek. Die samenvatting geldt voor je gemeten gegevens, oftewel je genomen steekproef. Door de gemeten gegevens samen te vatten kun je beter zien wat je in je steekproef observeert.
+Allereerst beschrijven we gegevens met kengetallen, zoals een centrummaat (gemiddelde of mediaan) en een spreidingsmaat (standaarddeviatie of interkwartielafstand), en met tabellen of figuren. Dit noemen we **beschrijvende statistiek**. Zo’n samenvatting geldt voor de gegevens die je hebt gemeten, oftewel voor je steekproef. Door die steekproef samen te vatten zie je sneller wat er in jouw gegevens gebeurt.
 
-**Inferentiële statistiek** gebruikt een steekproef om met een gekozen onzekerheid iets te zeggen over een bredere populatie (bijvoorbeeld met een schatting, betrouwbaarheidsinterval of toets). Dat vraagt om een passende onderzoeksopzet en aannames.
+**Inferentiële statistiek** gaat een stap verder. Daarmee gebruik je een steekproef om iets te zeggen over een bredere populatie, bijvoorbeeld met een schatting, een betrouwbaarheidsinterval of een toets. Dat vraagt om een passende onderzoeksopzet en aannames. In dit vak oefenen we vooral beschrijven en lezen.
 
-Een gemiddelde wachttijd van vier minuten in jouw steekproef bewijst niet dat alle patiënten in het ziekenhuis gemiddeld vier minuten wachten. Deze gemiddelde wachttijd vat enkel je gemeten gegevens samen. In dit vak oefenen we vooral beschrijven en lezen.
+Een gemiddelde wachttijd van vier minuten in jouw steekproef bewijst dus niet dat alle patiënten in het ziekenhuis gemiddeld vier minuten wachten. Het vat alleen de gemeten gegevens samen.
 
 ### Type gegevens
 
-Een **variabele** is een kenmerk dat je meet of registreert, bijvoorbeeld bloeddruk of type spreekuur. Variabelen zijn grofweg **categorisch** of **numeriek**. Het type bepaalt hoe je samenvat en visualiseert (en later ook welke toets past).
+In onderzoek komen verschillende soorten gegevens voor, denk aan bloedwaarden, wachttijden, type spreekuur of antwoorden op een vragenlijst. Een **variabele** is een kenmerk dat je meet of registreert. Grofweg onderscheiden we **categorische** en **numerieke** variabelen. Dat onderscheid bepaalt hoe je samenvat en visualiseert, en later ook welke toets past.
 
 | Soort gegevens | Voorbeeld | Samenvatting |
 |----------------|-----------|--------------|
 | Categorisch | Type spreekuur, geslacht | Aantal en percentage |
 | Numeriek | Wachttijd, leeftijd | Centrum en spreiding |
 
-**Categorisch.** Je telt hoe vaak elke categorie voorkomt. Eén variabele: 22 van 40 patiënten hebben een urgent spreekuur ($22/40 = 55\%$). Het percentage is geen aantal; noem altijd de noemer.
+**Categorisch.** Je telt hoe vaak elke categorie voorkomt. Bijvoorbeeld: 22 van 40 patiënten hebben een urgent spreekuur ($22/40 = 55\%$). Een percentage is geen aantal, dus noem altijd de noemer erbij.
 
 Twee categorische variabelen vat je samen in een **kruisstabel** (aantallen per combinatie):
 
@@ -100,20 +102,20 @@ Twee categorische variabelen vat je samen in een **kruisstabel** (aantallen per 
 
 Hieruit lees je bijvoorbeeld: 12 van de 22 vrouwen (55%) hadden een urgent spreekuur, en 22 van de 40 patiënten (55%) overall.
 
-**Numeriek.** De waarden zijn getallen waarmee je kunt rekenen. Je beschrijft meestal centrum en spreiding van de verdeling. Binnen numerieke gegevens onderscheiden we:
+**Numeriek.** De waarden zijn getallen waarmee je kunt rekenen. Je beschrijft meestal centrum en spreiding van de verdeling. Binnen numerieke gegevens onderscheiden we verder:
 
-- **Continu:** elke waarde in een interval is in principe mogelijk (binnen de meetprecisie). Voorbeelden: wachttijd in minuten, bloeddruk in mmHg, leeftijd in jaren. Tussen 3 en 4 minuten bestaan ook 3,2 of 3,75 minuten.
-- **Discreet:** alleen aparte, telbare waarden. Voorbeelden: aantal bezoeken, aantal kinderen, score op een Likertschaal van 1 tot 5. 
+- **Continu:** binnen het passende interval zijn in principe alle waarden mogelijk (binnen de meetprecisie). Voorbeelden: wachttijd in minuten, bloeddruk in mmHg, lengte of leeftijd. Tussen 3 en 4 minuten bestaan ook 3,2 of 3,75 minuten.
+- **Discreet:** alleen bepaalde, telbare waarden. Voorbeelden: aantal bezoeken, aantal kinderen, of een score op een Likertschaal van 1 tot 5. Ouders kunnen bijvoorbeeld geen 2,5 kind hebben.
 
-Beide typen zijn numeriek en kun je met gemiddelde of mediaan samenvatten. Het onderscheid helpt vooral bij visualisatie (histogram past goed bij continu; bij weinig discrete waarden zie je soms losse staven) en later bij de keuze van een toets.
+Beide typen zijn numeriek en kun je met gemiddelde of mediaan samenvatten. Het onderscheid helpt vooral bij visualisatie: een histogram past goed bij continue gegevens, terwijl je bij weinig discrete waarden soms losse staven ziet. Later speelt dit ook mee bij de keuze van een toets.
 
 ### Centrummaten
 
-Een lijst losse metingen is lastig te overzien. Een **centrummaat** vat die lijst samen in één getal dat aangeeft waar de gegevens typisch liggen: “ongeveer hoeveel?” of “wat komt het meest voor?”. Zo kun je groepen of meetmomenten vergelijken zonder elke individuele waarde te hoeven bekijken. Bijvoorbeeld: de typische wachttijd op de poli, of de meest voorkomende klacht. Welke centrummaat past, hangt af van het type gegevens en van uitschieters.
+Je kent waarschijnlijk al het idee van een gemiddelde. Misschien ken je ook de mediaan, of de modus? Een lijst losse metingen is lastig te overzien. Een **centrummaat** (ook wel locatiemaat) vat die lijst samen in één getal dat aangeeft waar de gegevens typisch liggen: “ongeveer hoeveel?” of “wat komt het meest voor?”. Zo kun je groepen of meetmomenten vergelijken zonder elke individuele waarde te bekijken. Denk aan de typische wachttijd op de poli, of de meest voorkomende klacht. Welke centrummaat past, hangt af van het type gegevens en van uitschieters.
 
 #### Gemiddelde, mediaan, modus
 
-Op dezelfde dataset kun je drie centrummaten berekenen. Voorbeeld: vijf wachttijden van 2, 3, 3, 4 en 8 minuten.
+Op dezelfde dataset kun je drie centrummaten berekenen. Neem vijf wachttijden van 2, 3, 3, 4 en 8 minuten.
 
 | Maat | Hoe bepaal je die? | Uitkomst |
 |------|--------------------|----------|
@@ -123,7 +125,7 @@ Op dezelfde dataset kun je drie centrummaten berekenen. Voorbeeld: vijf wachttij
 
 Bij een **even** aantal waarden is er geen enkele middelste. Neem dan het gemiddelde van de twee middelste na ordenen: bij 2, 3, 4, 8 is de mediaan $(3+4)/2 = 3{,}5$ minuten.
 
-De **modus** is de meest voorkomende waarde. Komt elke waarde even vaak voor, dan is er geen modus. Komen twee (of meer) waarden even vaak en vaker voor dan de rest, dan zijn er meerdere modi: bij 2, 2, 5, 5, 8 zijn zowel 2 als 5 modus. Bij categorische gegevens kun je alleen de modus als centrummaat gebruiken: gemiddelde en mediaan zijn daar niet gedefinieerd. Als “regulier” vaker voorkomt dan “urgent”, is regulier de modus.
+De **modus** is de meest voorkomende waarde. Komt elke waarde even vaak voor, dan is er geen modus. Komen twee of meer waarden even vaak en vaker voor dan de rest, dan zijn er meerdere modi: bij 2, 2, 5, 5, 8 zijn zowel 2 als 5 modus. Bij categorische gegevens kun je alleen de modus als centrummaat gebruiken, omdat gemiddelde en mediaan daar niet gedefinieerd zijn. Als “regulier” vaker voorkomt dan “urgent”, is regulier de modus.
 
 #### Uitschieters
 
@@ -132,19 +134,21 @@ Een extreme waarde beïnvloedt niet alle centrummaten even sterk. Neem opnieuw d
 - som wordt 40, **gemiddelde** wordt 8;
 - **mediaan** en **modus** blijven 3.
 
-Alle waarden beïnvloeden het gemiddelde, omdat elke observatie in de som meetelt. De mediaan hangt alleen af van de middelste rangpositie na ordenen: zolang die middelste waarde(n) hetzelfde blijven, verandert de mediaan niet als je een uiterste groter of kleiner maakt. Daarom is de mediaan **robuuster tegen uitschieters** dan het gemiddelde. Een hoge waarde is niet automatisch een fout en mag niet zonder reden worden verwijderd. Of je gemiddelde of mediaan rapporteert, hangt af van de vraag.
+Alle waarden beïnvloeden het gemiddelde, omdat elke observatie in de som meetelt. De mediaan hangt alleen af van de middelste rangpositie na ordenen. Zolang die middelste waarde(n) hetzelfde blijven, verandert de mediaan niet als je een uiterste groter of kleiner maakt. Daarom is de mediaan **robuuster tegen uitschieters** dan het gemiddelde.
+
+Let op: een hoge waarde is niet automatisch een fout, en mag niet zonder reden worden verwijderd. Of je gemiddelde of mediaan rapporteert, hangt af van je vraag en van de verdeling van de gegevens.
 
 ### Spreidingsmaten
 
-Een centrummaat zegt waar de gegevens ongeveer liggen, maar niet hoe ver ze uiteenlopen. Twee groepen met hetzelfde gemiddelde of dezelfde mediaan kunnen toch heel anders zijn: in de ene groep liggen bijna alle waarden dicht bij het centrum, in de andere lopen ze sterk uiteen. Die onderlinge verschillen doen er klinisch toe: denk aan een gemiddelde bloeddruk die “goed” lijkt, terwijl individuele patiënten sterk variëren. Daarom voeg je naast een centrummaat een **spreidingsmaat** toe.
+Een centrummaat zegt waar de gegevens ongeveer liggen, maar niet hoe ver ze uiteenlopen. Twee groepen met hetzelfde gemiddelde of dezelfde mediaan kunnen toch heel anders zijn. In de ene groep liggen bijna alle waarden dicht bij het centrum, in de andere lopen ze sterk uiteen. Die onderlinge verschillen doen er klinisch toe. Denk aan een gemiddelde bloeddruk die “goed” lijkt, terwijl individuele patiënten sterk variëren. Daarom voeg je naast een centrummaat een **spreidingsmaat** toe.
 
 #### Spreidingsbreedte
 
-Spreidingsbreedte = maximum − minimum. Bij 2, 3, 3, 4, 8 is dat $8 - 2 = 6$ minuten.
+Hoe geef je de spreiding van een verdeling weer in een paar getallen? De eenvoudigste maat is de spreidingsbreedte: maximum − minimum. Bij 2, 3, 3, 4, 8 is dat $8 - 2 = 6$ minuten.
 
-Deze maat gebruikt alleen de twee uitersten en is gevoelig voor uitschieters (met 28 i.p.v. 8 wordt de breedte 26). Schrijf desgewenst ook minimum en maximum apart op: dan zie je niet alleen hoe breed het interval is, maar ook waar het ligt.
+Deze maat gebruikt alleen de twee uitersten en is gevoelig voor uitschieters. Vervang je 8 door 28, dan wordt de breedte 26. Schrijf desgewenst ook minimum en maximum apart op. Dan zie je niet alleen hoe breed het interval is, maar ook waar het ligt.
 
-De spreidingsbreedte is nuttig als eerste, snelle indruk van het bereik: “hoe ver lopen de waarden uiteen?” Denk aan labreferenties (laagste tot hoogste gemeten waarde) of als je wilt weten of alle metingen binnen een klinisch relevant interval vallen. Voor een stabiele samenvatting van spreiding in een steekproef is de standaarddeviatie of IQR meestal informatiever, omdat die niet alleen van twee extreme punten afhangen. Zie hiervoor hieronder.
+De spreidingsbreedte geeft een snelle eerste indruk van het bereik: “hoe ver lopen de waarden uiteen?” Dat kan nuttig zijn bij labreferenties, of als je wilt weten of alle metingen binnen een klinisch relevant interval vallen. Voor een stabielere samenvatting van spreiding in een steekproef zijn standaarddeviatie of IQR meestal informatiever, omdat die niet alleen van twee extreme punten afhangen.
 
 #### Standaarddeviatie
 
@@ -179,11 +183,11 @@ Voor wachttijden 2, 3, 3, 4, 8 (gemiddelde 4):
 2. gekwadrateerde afwijkingen: 4, 1, 1, 0, 16 (som = 22);
 3. standaarddeviatie: $\sqrt{22 / 5} \approx 2{,}10$ minuten.
 
-Positieve en negatieve afwijkingen heffen elkaar zo niet op. Bij standaarddeviatie = 0 zijn alle waarden gelijk. Gemiddelde ± standaarddeviatie is geen minimum en maximum. De standaarddeviatie beschrijft verschillen tussen waarnemingen, niet de onzekerheid van het gemiddelde.
+Positieve en negatieve afwijkingen heffen elkaar zo niet op. Bij standaarddeviatie = 0 zijn alle waarden gelijk. Let op: gemiddelde ± standaarddeviatie is geen minimum en maximum. De standaarddeviatie beschrijft verschillen tussen waarnemingen, niet de onzekerheid van het gemiddelde.
 
 #### Interkwartielafstand (IQR)
 
-**Kwartielen** verdelen een geordende reeks in vier even grote delen (elk 25% van de waarnemingen):
+**Kwartielen** verdelen een geordende reeks in vier even grote delen, elk met 25% van de waarnemingen:
 
 - $Q_1$ (eerste kwartiel): 25% van de waarden is kleiner of gelijk aan $Q_1$;
 - $Q_2$ (tweede kwartiel): dat is de **mediaan**; 50% ligt eronder;
@@ -213,13 +217,13 @@ ggplot(df_q, aes(wacht, y)) +
 
 De **interkwartielafstand** (IQR, van *interquartile range*) is het verschil tussen het derde en het eerste kwartiel: $\mathrm{IQR} = Q_3 - Q_1$. Die breedte beslaat de middelste 50% van de gegevens.
 
-Voorbeeld: 2, 4, 4, 6, 6, 8, 8, 10 minuten. Mediaan ($Q_2$) = 6, $Q_1$ = 4, $Q_3$ = 8, dus $\mathrm{IQR} = 8 - 4 = 4$ minuten. De IQR is een breedte, de grenzen zijn $Q_1$ en $Q_3$ zelf.
+Voorbeeld: 2, 4, 4, 6, 6, 8, 8, 10 minuten. Mediaan ($Q_2$) = 6, $Q_1$ = 4, $Q_3$ = 8, dus $\mathrm{IQR} = 8 - 4 = 4$ minuten. De IQR is dus een breedte. De grenzen van dat middelste deel zijn $Q_1$ en $Q_3$ zelf.
 
-Omdat bij een IQR de uitersten buiten de middelste helft vallen, is de IQR **robuuster tegen uitschieters** dan de spreidingsbreedte of de standaarddeviatie. In een boxplot zie je de IQR terug als de breedte van de box.
+Omdat de uitersten buiten de middelste helft vallen, is de IQR **robuuster tegen uitschieters** dan de spreidingsbreedte of de standaarddeviatie. In een boxplot zie je de IQR terug als de breedte van de box.
 
 ### Gemiddelde en standaarddeviatie, waarom beide?
 
-Twee groepen kunnen hetzelfde gemiddelde hebben en toch heel anders verspreid zijn. Bijvoorbeeld beide gemiddeld 6 minuten, maar groep A met standaarddeviatie ≈ 1,4 en groep B met ≈ 2,8. Alleen het gemiddelde vertelt niet hoe groot de onderlinge verschillen zijn; daarvoor heb je ook een spreidingsmaat nodig.
+Waarom rapporteren we vaak zowel een centrummaat als een spreidingsmaat? Twee groepen kunnen hetzelfde gemiddelde hebben en toch heel anders verspreid zijn. Stel dat beide groepen gemiddeld 6 minuten wachten, maar groep A heeft standaarddeviatie ≈ 1,4 en groep B ≈ 2,8. Alleen het gemiddelde vertelt dan niet hoe groot de onderlinge verschillen zijn. Daarvoor heb je ook een spreidingsmaat nodig.
 
 ```{r}
 #| label: fig-zelfde-gemiddelde
@@ -251,7 +255,7 @@ ggplot(df_spread, aes(x, y, colour = groep)) +
 
 #### Overzicht
 
-Kies eerst wat je wilt laten zien, en daarna een passend grafiektype. Een grafiek vat samen en kan informatie weglaten.
+Het type figuur moet passen bij de gegevens én bij de vraag die je wilt beantwoorden. Kies daarom eerst wat je wilt laten zien, en daarna een passend grafiektype. Bedenk ook: een grafiek vat samen en kan informatie weglaten.
 
 | Wat wil je zien? | Passende grafiek |
 |------------------|------------------|
@@ -264,13 +268,13 @@ Een **verdeling** gaat over de waarden van één variabele. Een **verband** gaat
 
 #### Staafdiagram en histogram
 
-Een **staafdiagram** vergelijkt **categorieën**. Elke balk is één groep (bijvoorbeeld urgent of regulier spreekuur); de hoogte is meestal een aantal of percentage. Tussen de balken zit vaak ruimte, en de volgorde op de x-as mag je kiezen (alfabetisch, van groot naar klein, of een vaste klinische volgorde).
+Een **staafdiagram** gebruik je om **categorieën** te vergelijken. Elke balk is één groep, bijvoorbeeld urgent of regulier spreekuur. De hoogte is meestal een aantal of percentage. Tussen de balken zit vaak ruimte, en de volgorde op de x-as mag je kiezen: alfabetisch, van groot naar klein, of een vaste klinische volgorde.
 
-Een **histogram** toont de **verdeling van één numerieke variabele**. Je deelt de getallenas in aaneengesloten intervallen (**klassen** of *bins*), bijvoorbeeld wachttijd 0–\<2, 2–\<4, 4–\<6 minuten, en telt hoeveel metingen in elke klasse vallen. De x-as is dus een getallenschaal: de volgorde ligt vast en aangrenzende klassen raken elkaar (geen gaten tussen balken).
+Een **histogram** toont de **verdeling van één numerieke variabele**. Je deelt de getallenas in aaneengesloten intervallen (**klassen** of *bins*), bijvoorbeeld wachttijd 0–\<2, 2–\<4, 4–\<6 minuten, en telt hoeveel metingen in elke klasse vallen. De x-as is dus een getallenschaal. De volgorde ligt vast, en aangrenzende klassen raken elkaar. Er zitten geen gaten tussen de balken.
 
-Verschil met een staafdiagram: “urgent” en “regulier” zijn labels, geen afstanden op een meetlat. Balken tegen elkaar zetten bij categorieën maakt er nog geen histogram van. Een histogram is ook geen tijdsverloop: de x-as is de gemeten waarde (wachttijd), niet “week 1, week 2”.
+Het verschil met een staafdiagram is belangrijk. Labels zoals “urgent” en “regulier” zijn geen afstanden op een meetlat. Balken tegen elkaar zetten bij categorieën maakt er nog geen histogram van. Een histogram is ook geen tijdsverloop: de x-as is de gemeten waarde (wachttijd), niet “week 1, week 2”.
 
-In ons voorbeeld vallen de wachttijden 2, 3, 3, 4, 8 zo in klassen van 2 minuten: drie metingen in 2–\<4, één in 4–\<6, één in 8–\<10. Bij **gelijke** klassebreedten mag de balkhoogte het aantal voorstellen. Zijn de breedten **ongelijk**, dan moet je frequentiedichtheid gebruiken (aantal gedeeld door breedte), zodat niet de hoogte maar het **oppervlak** van de balk het aantal weergeeft.
+In ons voorbeeld vallen de wachttijden 2, 3, 3, 4, 8 zo in klassen van 2 minuten: drie metingen in 2–\<4, één in 4–\<6, één in 8–\<10. Bij **gelijke** klassebreedten mag de balkhoogte het aantal voorstellen. Zijn de breedten **ongelijk**, dan gebruik je frequentiedichtheid (aantal gedeeld door breedte). Niet de hoogte, maar het **oppervlak** van de balk geeft dan het aantal weer.
 
 ```{r}
 #| label: fig-staaf-hist
@@ -310,13 +314,13 @@ p_bar + p_hist + plot_annotation(
 
 #### Boxplot
 
-Een **boxplot** tekent $Q_1$, mediaan en $Q_3$ als een rechthoek met een streep ertussen, plus snorren naar de uiteinden. Neem opnieuw de wachttijden 2, 4, 4, 6, 6, 8, 8, 10:
+Een **boxplot** vat een numerieke verdeling samen met kwartielen. De figuur tekent $Q_1$, mediaan en $Q_3$ als een rechthoek met een streep ertussen, plus snorren naar de uiteinden. Neem opnieuw de wachttijden 2, 4, 4, 6, 6, 8, 8, 10:
 
 - de **box** loopt van $Q_1$ tot $Q_3$ (hier 4 tot 8; de breedte is de IQR);
 - de lijn in de box is de **mediaan** ($Q_2$ = 6);
 - de **snorren** (lijnen buiten de box) reiken in dit voorbeeld tot minimum 2 en maximum 10.
 
-In andere figuren stoppen snorren vaak bij de uiterste waarde binnen $1{,}5\times\mathrm{IQR}$ van de box; verder wegliggende punten staan dan los als uitschieters. Lees daarom altijd het bijschrift: min/max-snorren en $1{,}5\times\mathrm{IQR}$-snorren betekenen iets anders.
+In andere figuren stoppen snorren vaak bij de uiterste waarde binnen $1{,}5\times\mathrm{IQR}$ van de box. Verder wegliggende punten staan dan los als uitschieters. Lees daarom altijd het bijschrift. Min/max-snorren en $1{,}5\times\mathrm{IQR}$-snorren betekenen iets anders.
 
 ```{r}
 #| label: fig-boxplot
@@ -338,11 +342,11 @@ ggplot(wacht, aes(x = "", y = wachttijd)) +
 
 #### Spreidingsdiagram
 
-In een **spreidingsdiagram** stelt ieder punt meestal één waarneming voor, met twee numerieke variabelen (bijvoorbeeld leeftijd en bloeddruk). Je ziet zo of er een **verband** is: stijgen de y-waarden mee als x toeneemt? Een samenhang in de figuur bewijst geen oorzakelijk verband. Verbind losse personen niet met een lijn alsof het opeenvolgende momenten van dezelfde persoon zijn.
+Om te kijken of twee numerieke variabelen samenhangen, gebruik je een **spreidingsdiagram**. Ieder punt stelt meestal één waarneming voor, bijvoorbeeld leeftijd en bloeddruk van één persoon. Je ziet zo of er een **verband** is: stijgen de y-waarden mee als x toeneemt? Een samenhang in de figuur bewijst nog geen oorzakelijk verband. Verbind losse personen ook niet met een lijn alsof het opeenvolgende momenten van dezelfde persoon zijn.
 
 #### Lijngrafiek
 
-Een **lijngrafiek** toont vaak een groepsgemiddelde of andere samenvatting over meetmomenten in de tijd. Eén punt is dan een groepswaarde op één tijdstip, geen individuele patiënt. De lijn helpt het **verloop** te volgen; controleer wel of de tijd op de x-as op ware schaal staat (zie later bij schaal op de assen).
+Een **lijngrafiek** toont vaak een groepsgemiddelde of andere samenvatting over meetmomenten in de tijd. Eén punt is dan een groepswaarde op één tijdstip, geen individuele patiënt. De lijn helpt het **verloop** te volgen. Controleer wel of de tijd op de x-as op ware schaal staat. Daarover later meer bij schaal op de assen.
 
 ```{r}
 #| label: fig-spreiding-lijn
@@ -383,16 +387,16 @@ p_sc + p_line + plot_annotation(
 
 ### Hoe lees ik een onderzoek?
 
-In een artikel (of abstract) staan veel bevindingen en getallen. Begin niet meteen van zin 1 tot het eind, maar werk in twee stappen.
+In een artikel of abstract staan vaak veel bevindingen en getallen dicht op elkaar. Begin daarom niet meteen bij zin 1 om alles achter elkaar te lezen. Werk liever in twee stappen.
 
-1. **Scannen / oriënteren.** Kijk snel door de tekst, tabellen en figuren heen. Zoek: wie zijn onderzocht (patiënten, $n$)? Wat is gemeten (uitkomst, eenheid)? Wanneer of hoe lang (meetmomenten)? Welke groepen of behandelingen worden vergeleken?
-2. **Gericht lezen.** Zoek daarna alleen de tabel, zin of figuur die jouw vraag beantwoordt. Lees koppen, eenheden, voetnoten en bijschriften voordat je een conclusie trekt over een getal.
+1. **Scannen / oriënteren.** Kijk eerst snel door de tekst, tabellen en figuren heen. Wie zijn onderzocht (patiënten, $n$)? Wat is gemeten (uitkomst, eenheid)? Wanneer of hoe lang is gemeten? Welke groepen of behandelingen worden vergeleken?
+2. **Gericht lezen.** Zoek daarna de tabel, zin of figuur die jouw vraag beantwoordt. Lees koppen, eenheden, voetnoten en bijschriften voordat je een conclusie trekt over een getal.
 
-Pas als je het artikel echt wilt doorgronden, lees je het van begin tot eind — dat kost veel tijd. Hieronder oefenen we scannen en gericht lezen apart voor tabellen, tekst en figuren.
+Pas als je het artikel echt wilt doorgronden, lees je het van begin tot eind. Dat kost veel tijd. Hieronder oefenen we dit scannen en gericht lezen apart voor tabellen, tekst en figuren.
 
 #### Tabellen
 
-Voor tabellen werk je meestal van buiten naar binnen: titel en kolomkoppen → groepsnamen met $n$ → de rij die je vraag beantwoordt → eenheid → voetnoot.
+Bij tabellen werk je meestal van buiten naar binnen: eerst titel en kolomkoppen, dan groepsnamen met $n$, dan de rij die je vraag beantwoordt, en tot slot eenheid en voetnoot.
 
 **Voorbeeld.** SPRINT (*Systolic Blood Pressure Intervention Trial*, NEJM 2015) vergeleek bij mensen met verhoogd cardiovasculair risico een **intensieve** bloeddrukbehandeling (streefwaarde systolisch \<120 mmHg) met een **standaard** behandeling (streefwaarde \<140 mmHg). Tabel 1 van zo’n artikel toont meestal **uitgangskenmerken**: hoe zagen de groepen eruit bij de start, vóór het effect van de behandeling?
 
@@ -405,19 +409,19 @@ Selectie uit die tabel:
 
 Voetnoot in het artikel: $\pm$ staat hier voor gemiddelde met standaarddeviatie.
 
-Lees zo: eerst de context (twee behandelarmen bij start), dan de groepsnamen op de kolommen met $n$, dan de rijen. Leeftijd is een gemiddelde met standaarddeviatie; “vrouw” is een aantal met percentage. De **conclusie die je hier wél mag trekken**: beide groepen lijken bij aanvang, op deze kenmerken, vergelijkbaar beschreven (bijna dezelfde gemiddelde leeftijd en vergelijkbaar aandeel vrouwen). De **conclusie die je hier niet mag trekken**: dat de groepen “bewezen gelijk” zijn, of dat intensief beter werkt dan standaard — dat beantwoordt deze beschrijvende starttabel niet.
+Wat kun je hieruit aflezen? Eerst de context: twee behandelarmen bij start. Daarna de groepsnamen op de kolommen met $n$, en dan de rijen. Leeftijd staat als gemiddelde met standaarddeviatie. “Vrouw” staat als aantal met percentage. Op deze kenmerken lijken beide groepen bij aanvang vergelijkbaar beschreven: bijna dezelfde gemiddelde leeftijd en een vergelijkbaar aandeel vrouwen. Dat betekent nog niet dat de groepen “bewezen gelijk” zijn, en ook niet dat intensief beter werkt dan standaard. Die vragen beantwoordt deze beschrijvende starttabel niet.
 
 #### Tekst
 
-Lees eerst globaal (wie, wat, wanneer), zoek daarna de uitkomst en de vergelijking. Let op signaalwoorden zoals *respectievelijk*, *vergeleken met*, *ten opzichte van*, *het verschil* en *echter*: die helpen oriënteren, maar vervangen nauwkeurig lezen niet.
+Lees eerst globaal wie, wat en wanneer, en zoek daarna de uitkomst en de vergelijking. Woorden zoals *respectievelijk*, *vergeleken met*, *ten opzichte van*, *het verschil* en *echter* helpen je oriënteren, maar vervangen nauwkeurig lezen niet.
 
-Voorbeeld: bij behandeling A en B dalen de gemiddelde bloeddrukken met 15 en 10 mmHg; het verschil tussen de groepen is 5 mmHg. *Respectievelijk* koppelt die getallen aan de eerdere volgorde: vijftien hoort bij A, tien bij B. Vijf is het verschil tussen de groepsgemiddelde dalingen — niet de daling van één patiënt, en ook niet “het effect in de hele populatie” zonder verdere informatie. In artikelen staat bij zo’n verschil soms nog een interval of andere maat voor onzekerheid; die leer je later preciezer lezen. Nu: welk getal hoort bij welke groep, en wat beschrijft het verschil?
+Voorbeeld: bij behandeling A en B dalen de gemiddelde bloeddrukken met 15 en 10 mmHg. Het verschil tussen de groepen is 5 mmHg. *Respectievelijk* koppelt die getallen aan de eerdere volgorde: vijftien hoort bij A, tien bij B. Vijf is het verschil tussen de groepsgemiddelde dalingen. Het is niet de daling van één patiënt, en ook niet zomaar “het effect in de hele populatie” zonder verdere informatie. In artikelen staat bij zo’n verschil soms nog een interval of andere maat voor onzekerheid. Die leer je later preciezer lezen. Voor nu is de kernvraag: welk getal hoort bij welke groep, en wat beschrijft het verschil?
 
 #### Figuren
 
-Lees systematisch: (1) assen, (2) legenda, (3) verschil of patroon, (4) bijschrift.
+Bij figuren helpt een vaste volgorde: eerst de assen, dan de legenda, daarna het verschil of patroon, en tot slot het bijschrift.
 
-Let op wat de y-as precies is (bijvoorbeeld *verandering*: nul betekent geen verandering, niet een bloeddruk van nul). Een groepsgemiddelde is geen individuele patiënt. Geen foutbalken betekent niet dat er geen spreiding of onzekerheid is.
+Let vooral op wat de y-as precies is. Staat er bijvoorbeeld *verandering*, dan betekent nul “geen verandering”, niet een bloeddruk van nul. Een groepsgemiddelde is bovendien geen individuele patiënt. En als er geen foutbalken staan, betekent dat nog niet dat er geen spreiding of onzekerheid is.
 
 ```{r}
 #| label: fig-figuur-lezen
@@ -449,7 +453,9 @@ ggplot(
 
 #### Foutbalken
 
-Dezelfde gegevens kunnen er anders uitzien afhankelijk van wat de balk betekent. **± standaarddeviatie** gaat over spreiding tussen waarnemingen. In figuren zie je soms ook **± SE** (standaardfout, Engels: standard error): dat is iets anders — het zegt iets over de precisie van een geschat gemiddelde, niet over hoe sterk patiënten onderling verschillen. Een kortere standaardfout-balk betekent dus niet dat de groep homogener is. Later in de opleiding komen standaardfout en betrouwbaarheidsintervallen uitgebreider aan bod; nu volstaat: lees altijd het bijschrift voordat je een foutbalk interpreteert.
+Dezelfde gegevens kunnen er anders uitzien, afhankelijk van wat de foutbalk betekent. **± standaarddeviatie** gaat over spreiding tussen waarnemingen: hoe sterk patiënten of metingen onderling verschillen. In figuren zie je soms ook **± SE** (standaardfout, Engels: *standard error*). Dat is iets anders. De standaardfout zegt iets over de precisie van een geschat gemiddelde, niet over hoe homogeen de groep is. Een kortere standaardfout-balk betekent dus niet dat patiënten minder van elkaar verschillen.
+
+Later in de opleiding komen standaardfout en betrouwbaarheidsintervallen uitgebreider aan bod. Voor nu is de boodschap: lees altijd het bijschrift voordat je een foutbalk interpreteert.
 
 ```{r}
 #| label: fig-foutbalken
@@ -479,11 +485,11 @@ ggplot(
 
 #### Afgesneden as
 
-De **y-as** bepaalt hoe groot een verschil eruitziet. Neem twee groepsgemiddelden van 145 en 150 mmHg: het echte verschil is 5 mmHg.
+De **y-as** bepaalt hoe groot een verschil eruitziet. Neem twee groepsgemiddelden van 145 en 150 mmHg. Het echte verschil is 5 mmHg.
 
-Begin je de y-as bij **0**, dan zijn beide balken ongeveer even hoog en ziet 5 mmHg er klein uit ten opzichte van het totaal. Begin je bij **140**, dan lijkt groep B “veel hoger” dan groep A — terwijl de getallen onveranderd zijn. De as is afgesneden: je ziet alleen het topje van de balken.
+Begin je de y-as bij **0**, dan zijn beide balken ongeveer even hoog en lijkt 5 mmHg klein ten opzichte van het totaal. Begin je bij **140**, dan lijkt groep B “veel hoger” dan groep A, terwijl de getallen onveranderd zijn. De as is afgesneden: je ziet alleen het topje van de balken.
 
-Bij **staafdiagrammen** vergelijken we vooral via balklengte. Daarom is een basis bij nul meestal eerlijker: anders overdrijft de figuur relatieve verschillen. Bij een **lijngrafiek** kan inzoomen wél nuttig zijn (bijvoorbeeld om een klein maar relevant verloop zichtbaar te maken), mits de schaal duidelijk in de assen en het bijschrift staat. Er is dus geen absolute regel “altijd nul”, wel de vraag: past deze schaal bij wat de figuur claimt te laten zien?
+Bij **staafdiagrammen** vergelijken we vooral via balklengte. Daarom is een basis bij nul meestal eerlijker. Anders overdrijft de figuur relatieve verschillen. Bij een **lijngrafiek** kan inzoomen juist nuttig zijn, bijvoorbeeld om een klein maar relevant verloop zichtbaar te maken. De schaal moet dan wel duidelijk in de assen en het bijschrift staan. Er is dus geen absolute regel “altijd nul”. De vraag is: past deze schaal bij wat de figuur claimt te laten zien?
 
 Lees daarom altijd het bereik van de as voordat je “groot verschil” of “nauwelijks verschil” concludeert.
 
@@ -510,11 +516,11 @@ p_y0 + p_y140 + plot_annotation(
 
 #### Schaal op de assen
 
-Niet alleen de y-as kan misleiden; ook de **x-as** bepaalt welke indruk je krijgt van snelheid of verloop.
+Niet alleen de y-as kan misleiden. Ook de **x-as** bepaalt welke indruk je krijgt van snelheid of verloop.
 
-Stel je meet een score op dag 0, dag 1 en dag 30 (zelfde daling: 10 → 8 → 6). Zet je die drie momenten **op gelijke afstand** als categorieën, dan lijken het interval van één dag en dat van 29 dagen even lang. De daling lijkt dan “in twee gelijke stappen” te gebeuren. Teken je dezelfde punten op een as met **werkelijke tijd**, dan zie je dat bijna de hele daling over een lange periode loopt en dat de eerste dag slechts een klein stukje is.
+Stel dat je een score meet op dag 0, dag 1 en dag 30, met dezelfde daling: 10 → 8 → 6. Zet je die drie momenten **op gelijke afstand** als categorieën, dan lijken het interval van één dag en dat van 29 dagen even lang. De daling lijkt dan “in twee gelijke stappen” te gebeuren. Teken je dezelfde punten op een as met **werkelijke tijd**, dan zie je dat bijna de hele daling over een lange periode loopt, en dat de eerste dag slechts een klein stukje is.
 
-De labels “0”, “1” en “30” alleen lossen dat niet op: als de plekken op de as even ver uit elkaar liggen, “voelt” de afstand gelijk, ook al zeggen de cijfers iets anders. Vraag dus: staat hier een echte meetschaal, of alleen een rij labels?
+Alleen de labels “0”, “1” en “30” lossen dat niet op. Als de plekken op de as even ver uit elkaar liggen, voelt de afstand gelijk, ook al zeggen de cijfers iets anders. Vraag jezelf dus af: staat hier een echte meetschaal, of alleen een rij labels?
 
 ```{r}
 #| label: fig-x-as
@@ -552,7 +558,7 @@ p_eq + p_true + plot_annotation(
 
 #### Absoluut en relatief
 
-Hetzelfde verschil kun je op twee manieren opschrijven. Dat verandert niet de getallen, wel de indruk.
+Hetzelfde verschil kun je op twee manieren opschrijven. Dat verandert niet de getallen, wel de indruk die je ervan krijgt.
 
 **Voorbeeld 1: groei over jaren.** Stel, een poli telt het aantal nieuwe verwijzingen (fictief):
 
@@ -564,7 +570,7 @@ Hetzelfde verschil kun je op twee manieren opschrijven. Dat verandert niet de ge
 - **Absolute groei** = nieuw − oud = $250 - 200 = 50$ verwijzingen. Je houdt de eenheid van de meting.
 - **Relatieve groei** = absolute groei gedeeld door de uitgangswaarde = $50 / 200 = 0{,}25$, oftewel **25%** toename.
 
-Beide zijn juist. “+50” klinkt anders dan “+25%”; zonder de 200 als referentie weet je bij “25% groei” niet of het om tientallen of duizenden gaat.
+Beide zijn juist, maar “+50” klinkt anders dan “+25%”. Zonder de 200 als referentie weet je bij “25% groei” niet of het om tientallen of duizenden gaat.
 
 **Voorbeeld 2: risico met en zonder behandeling.**
 
@@ -576,6 +582,6 @@ Beide zijn juist. “+50” klinkt anders dan “+25%”; zonder de 200 als refe
 - **Absoluut verschil**: 10 minder per 1000, oftewel **1 procentpunt** (van 2% naar 1%).
 - **Relatief verschil**: $(2 - 1) / 2 = 0{,}50$, oftewel **50%** daling ten opzichte van het uitgangsrisico.
 
-Opnieuw beide juist, andere indruk. Let op: **procentpunten** (absoluut verschil tussen twee percentages) zijn niet hetzelfde als **procent** relatieve verandering. Een daling van 2% naar 1% is 1 procentpunt absoluut en 50% relatief — niet “1% relatief”.
+Opnieuw zijn beide juist, maar de indruk verschilt. Let op: **procentpunten** (het absolute verschil tussen twee percentages) zijn niet hetzelfde als **procent** relatieve verandering. Een daling van 2% naar 1% is 1 procentpunt absoluut en 50% relatief. Dat is niet hetzelfde als “1% relatief”.
 
-Noem daarom altijd: uitgangswaarde (referentie), noemer, en bij risico’s ook de tijdsduur. “50% minder” of “25% groei” alleen is te weinig informatie.
+Noem daarom altijd de uitgangswaarde (referentie) en de noemer, en bij risico’s ook de tijdsduur. “50% minder” of “25% groei” alleen is te weinig informatie.
