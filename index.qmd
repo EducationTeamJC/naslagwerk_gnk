@@ -1,17 +1,10 @@
 # Voorwoord {.unnumbered}
 
-::: {.blok-meta}
-**Blok:** Basis van Gezondheid en Ziekte · **Jaar:** 2026–2027 · Geneeskunde
-:::
+Welkom bij het naslagwerk voor het statistiekonderwijs in de bachelor Geneeskunde. In dit document vind je per vak alle informatie die ook tijdens de hoorcolleges en werkcolleges wordt aangeboden. Gedurende je bacheloropleiding kun je dit online naslagwerk blijven gebruiken als naslag voor het statistiekonderwijs.
 
-Dit naslagwerk hoort bij het statistiekonderwijs in het blok *Basis van Gezondheid en Ziekte*. Het is bedoeld als compacte, academische naslag naast hoorcollege, werkcollege en toetsing.
+Dit document is nog in ontwikkeling en wordt verder aangevuld naarmate het nieuwe curriculum Geneeskunde volledig wordt ingevoerd.
 
-## Opbouw
+## Opbouw vakken {.unnumbered}
 
-1. **Leerdoelen** — wat je aan het eind van dit onderdeel moet kunnen  
-2. **Inhoud** — uitleg, definities en intermezzo’s (wordt aangevuld)
-
-## Kadertjes in de tekst
-
-- **Definitie** — kernbegrip  
-- **Intermezzo** — extra uitleg of verdieping, geen verplichte stof tenzij anders aangegeven  
+1. Basis van Gezondheid en Ziekte (Jaar 1)
+2. ...

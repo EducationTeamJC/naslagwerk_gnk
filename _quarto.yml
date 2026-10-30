@@ -4,19 +4,18 @@ project:
 
 book:
   title: "Naslagwerk Statistiek"
-  subtitle: "Beschrijvende statistiek, tabellen en grafieken"
-  author: "Dorieke Brink Kwakkel & Jeppe Severens"
-  date: "2026–2027"
+  subtitle: "Bachelor Geneeskunde - UMC Utrecht"
+  author: "Onderwijsteam Julius Centrum"
   site-url: https://educationteamjc.github.io/naslagwerk_gnk/
   repo-url: https://github.com/EducationTeamJC/naslagwerk_gnk
   chapters:
     - index.qmd
-    - 01-leerdoelen.qmd
-    - 02-inhoud.qmd
+    - 01-BvGZ.qmd
+    # - 02-inhoud.qmd
   page-navigation: true
   search: true
   sidebar:
-    collapse-level: 1
+    collapse-level: 0
 
 format:
   html:
