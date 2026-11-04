@@ -415,7 +415,7 @@ Wat kun je hieruit aflezen? Eerst de context: twee behandelarmen bij start. Daar
 
 Lees eerst globaal wie, wat en wanneer, en zoek daarna de uitkomst en de vergelijking. Woorden zoals *respectievelijk*, *vergeleken met*, *ten opzichte van*, *het verschil* en *echter* helpen je oriënteren, maar vervangen nauwkeurig lezen niet.
 
-Voorbeeld: bij behandeling A en B dalen de gemiddelde bloeddrukken met 15 en 10 mmHg. Het verschil tussen de groepen is 5 mmHg. *Respectievelijk* koppelt die getallen aan de eerdere volgorde: vijftien hoort bij A, tien bij B. Vijf is het verschil tussen de groepsgemiddelde dalingen. Het is niet de daling van één patiënt, en ook niet zomaar “het effect in de hele populatie” zonder verdere informatie. In artikelen staat bij zo’n verschil soms nog een interval of andere maat voor onzekerheid. Die leer je later preciezer lezen. Voor nu is de kernvraag: welk getal hoort bij welke groep, en wat beschrijft het verschil?
+Voorbeeld: bij behandeling A en B dalen de gemiddelde bloeddrukken met respectievelijk 15 en 10 mmHg. Het verschil tussen de groepen is 5 mmHg. *Respectievelijk* koppelt die getallen aan de eerdere volgorde: vijftien hoort bij A, tien bij B. Vijf is het verschil tussen de groepsgemiddelde dalingen. Het is niet de daling van één patiënt, en ook niet zomaar “het effect in de hele populatie” zonder verdere informatie. In artikelen staat bij zo’n verschil soms nog een interval of andere maat voor onzekerheid. Die leer je later preciezer lezen. Voor nu is de kernvraag: welk getal hoort bij welke groep, en wat beschrijft het verschil?
 
 #### Figuren
 
