@@ -3,7 +3,7 @@ project:
   output-dir: _book
 
 book:
-  title: "Naslagwerk Statistiek"
+  title: "Naslagwerk Data Science & Statistiek"
   subtitle: "Bachelor Geneeskunde - UMC Utrecht"
   author: "Onderwijsteam Julius Centrum"
   site-url: https://educationteamjc.github.io/naslagwerk_gnk/
@@ -11,7 +11,7 @@ book:
   chapters:
     - index.qmd
     - 01-BvGZ.qmd
-    # - 02-inhoud.qmd
+    # - 02-CirculatieRespiratie.qmd
   page-navigation: true
   search: true
   sidebar:

@@ -1,0 +1,6 @@
+
+Regels:
+Het onderwijs volgt de opzet van Constructive Alignment. Alle tekst moet dus passen bij de leerdoelen en de leerdoelen moeten behaald zijn na (onder andere, naast werkcolleges en hoorcolleges) doorname van de tekst.
+Dit is een bachelor geneeskunde naslagwerk voor statistiek en data science. Waar mogelijk moet in een hoofdstuk beide statistiek en datascience inslaghoeken worden behandeld en in context worden geplaatst
+Tekst moet leesbaar zijn en niet onnodig ingewikkeld. Er mogen en moeten ingewikkelde dingen worden beschreven, maar dit hoeft niet wollig of met uigebreide jargon.
+Refereer in het algemeen enkel terug, hoofdstukken mogen niet vooruit wijzen, tenzij hier expliciet van wordt afgewezen.

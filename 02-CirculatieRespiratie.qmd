@@ -1,4 +1,4 @@
-# Circulatie en Respiratie
+# Circulatie en Respiratie {#sec-circulatie}
 
 ```{r}
 #| label: setup
@@ -18,19 +18,17 @@ col_b <- "#E69F00"
 col_grey <- "#666666"
 ```
 
-Welkom bij het statistiekdeel van het vak Circulatie en Respiratie! In dit onderdeel bouwen we voort op de kennis die je hebt opgedaan in Basis van Gezondheid en Ziekte (BvGZ). Je verdiept je verder in statistiek in de geneeskunde en leert hoe je medische gegevens kunt verkennen, interpreteren en kritisch beoordelen.
+Welkom bij het data science en statistiekdeel van het vak Circulatie en Respiratie! In dit onderdeel bouwen we voort op de kennis die je hebt opgedaan in [Basis van Gezondheid en Ziekte (BvGZ)](01-BvGZ.qmd#sec-bvgz). Je verdiept je verder in data science en statistiek in de geneeskunde en we gaan verder met leren hoe je medische gegevens systematisch kunt verkennen en kritisch kan beoordelen.
 
-Als arts kom je dagelijks gegevens tegen op het gebied van cardiologie en longgeneeskunde, zoals bloeddrukmetingen, hartfrequentie, cholesterolwaarden, longfunctie en behandelresultaten. Statistiek helpt je deze gegevens te beschrijven en te interpreteren, zodat je ze kunt gebruiken bij het beoordelen van de gezondheid van patiënten en het nemen van medische beslissingen.
+Want: hoe weet je of de resultaten van een onderzoek ook gelden voor andere patiënten? Wat kun je op basis van een steekproef van patiënten zeggen over een hele populatie van patiënten? En hoe voorkom je dat je conclusies trekt die niet door je gegevens worden ondersteund?
 
-Maar hoe weet je of de resultaten van een onderzoek ook gelden voor andere patiënten? Wat kun je op basis van een steekproef zeggen over een hele populatie? En hoe voorkom je dat je conclusies trekt die niet door de gegevens worden ondersteund?
+We beginnen met de relatie tussen steekproef en populatie. Daarna maak je kennis met data science: hoe kun je gegevens verkennen, patronen ontdekken en data visualiseren? Vervolgens kijken we kritisch naar het gebruik en misbruik van statistiek. Je leert onder andere waarom correlatie niet automatisch causaliteit betekent en hoe selectiebias en misleidende statistieken tot verkeerde conclusies kunnen leiden.
 
-We beginnen met de relatie tussen steekproef en populatie. Daarna maak je kennis met datascience: hoe kun je gegevens verkennen, patronen ontdekken en data visualiseren? Vervolgens kijken we kritisch naar het gebruik en misbruik van statistiek. Je leert onder andere waarom correlatie niet automatisch causaliteit betekent en hoe selectiebias en misleidende statistieken tot verkeerde conclusies kunnen leiden.
-
-Het doel is dat je statistische informatie uit wetenschappelijke artikelen, de media en de klinische praktijk kritisch kunt beoordelen. Zo ontwikkel je de vaardigheden om medische onderzoeksresultaten op waarde te schatten en deze op een verantwoorde manier te gebruiken.
+Het doel is dat je statistische informatie uit wetenschappelijke artikelen, de media en de klinische praktijk kritisch kunt beoordelen. Zo ontwikkel je de vaardigheden om medische onderzoeksresultaten op waarde te schatten en deze op een verantwoorde manier te gebruiken. Dezelfde vragen gelden wanneer resultaten of waarschuwingen uit data of een predictiemodel komen: je wilt weten op welke patiënten die data zijn gebaseerd.
 
 We beginnen met de leerdoelen waarop dit onderwijs is gebaseerd. Daarna volgt het naslagwerk, waarin je de uitleg, voorbeelden en toepassingen van de verschillende onderwerpen kunt terugvinden.
 
-Statistiek leer je niet alleen door de theorie te bestuderen, maar vooral door deze toe te passen op voorbeelden uit de medische praktijk. Neem daarom de tijd om de voorbeelden te bekijken en probeer steeds zelf na te denken over wat je uit de gegevens kunt concluderen – en minstens zo belangrijk: wat je er niet uit kunt concluderen.
+Data science en statistiek leer je niet alleen door de theorie te bestuderen, maar vooral door deze toe te passen op voorbeelden uit de medische praktijk. Neem daarom de tijd om de voorbeelden te bekijken en probeer steeds zelf na te denken over wat je uit de gegevens kunt concluderen. En minstens zo belangrijk: wat je er niet uit kunt concluderen.
 
 Veel leerplezier!
 
@@ -40,8 +38,8 @@ De student kan statistische gegevens uit medisch-wetenschappelijk onderzoek **kr
 
 ### Deelleerdoelen
 
-1. Het onderscheid uitleggen tussen een steekproef en een populatie.
-2. Uitleggen waarom onderzoeksresultaten uit een steekproef niet zonder meer gelden voor de gehele populatie.
+1. Het verschil uitleggen tussen een steekproef en een populatie.
+2. Uitleggen waarom onderzoeksresultaten uit een steekproef niet zomaar gelden voor de gehele populatie.
 3. Het belang van representativiteit en de invloed van toevalsvariatie op onderzoeksresultaten beschrijven.
 4. Uitleggen hoe je een dataset systematisch kunt verkennen en welke rol beschrijvende statistiek en datavisualisatie daarbij spelen.
 5. Geschikte grafieken kiezen om patronen, verdelingen en verbanden in medische gegevens zichtbaar te maken.
@@ -54,25 +52,25 @@ De student kan statistische gegevens uit medisch-wetenschappelijk onderzoek **kr
 
 ### 2.1 De onderzoeksvraag bepaalt over wie je iets wilt zeggen
 
-Stel: een onderzoeker wil weten hoe hoog de systolische bloeddruk gemiddeld is bij volwassenen met hypertensie in Nederland. Het is meestal niet haalbaar om bij iedere volwassene met hypertensie een bloeddrukmeting uit te voeren. Daarom onderzoekt de onderzoeker een deel van deze groep.
+Stel: een onderzoeker wil weten hoe hoog de systolische bloeddruk gemiddeld is bij volwassenen met hypertensie in Nederland. Het is niet haalbaar om bij iedere volwassene met hypertensie in Nederland een bloeddrukmeting te doen. Daarom onderzoek de onderzoeker slechts een deel van deze groep: de steekproef.
 
-Het is belangrijk om vooraf precies te bepalen over wie de onderzoeker een uitspraak wil doen. Een onderzoek onder patiënten van een gespecialiseerd hartcentrum kan bijvoorbeeld informatie geven over patiënten met complexe hartziekten, maar hoeft niet zonder meer toepasbaar te zijn op alle mensen met hart- en vaatziekten.
+Het is belangrijk om vooraf precies te bepalen over wie je met je onderzoek een uitspraak wil doen (oftewel: de populatie). Een onderzoek onder patiënten van een gespecialiseerd hartcentrum kan bijvoorbeeld informatie geven over patiënten met complexe hartziekten, maar is misschien niet toepasbaar op alle mensen met hart- en vaatziekten.
 
 - **Populatie:** de volledige groep personen of observaties waarover je iets wilt weten.
 - **Doelpopulatie:** de groep waarop de onderzoeker de conclusies wil toepassen.
-- **Steekproef:** de personen die daadwerkelijk aan het onderzoek deelnemen.
+- **Steekproef:** de personen die daadwerkelijk aan het onderzoek deelnemen, danwel in je dataset zitten.
 
 De doelpopulatie en de onderzochte steekproef zijn dus niet hetzelfde. Bij het lezen van een onderzoek moet je steeds nagaan hoe groot de afstand tussen beide groepen is.
 
 ### 2.2 Representativiteit: wie doet er mee?
 
-Een steekproef is bruikbaar voor een bepaalde onderzoeksvraag wanneer de deelnemers voldoende overeenkomen met de doelpopulatie voor kenmerken die relevant zijn voor die vraag. Dit noemen we representativiteit.
+Een steekproef is bruikbaar voor een bepaalde onderzoeksvraag en doelpopulatie, wanneer de deelnemers voldoende overeenkomen qua kenmerken die relevant zijn voor die vraag. Dit noemen we representativiteit. 
 
-Denk aan een onderzoek naar een nieuwe behandeling voor COPD. Als vrijwel alle deelnemers afkomstig zijn uit gespecialiseerde academische longcentra, kunnen zij verschillen van patiënten die uitsluitend door de huisarts worden behandeld. Mogelijk hebben zij ernstigere klachten, meer bijkomende aandoeningen of al meerdere behandelingen geprobeerd.
+Denk aan een onderzoek naar een nieuwe behandeling voor COPD. Als vrijwel alle deelnemers afkomstig zijn uit gespecialiseerde academische longcentra, kunnen zij verschillen van patiënten die uitsluitend door de huisarts worden behandeld. Mogelijk hebben zij ernstigere klachten, meer bijkomende aandoeningen of al meerdere behandelingen geprobeerd. Hetzelfde geldt voor een risicoscore of model dat vooral op gegevens uit gespecialiseerde centra is gebaseerd: die uitkomsten zijn niet automatisch toepasbaar op patiënten in de huisartsenpraktijk.
 
 Een **aselecte steekproef** wordt geselecteerd met een toevalsprocedure. Dat kan de kans op systematische over- of ondervertegenwoordiging verkleinen. Het garandeert echter niet dat een kleine steekproef precies op de populatie lijkt. Bij een **gemakssteekproef** worden deelnemers geselecteerd omdat ze gemakkelijk beschikbaar zijn, bijvoorbeeld patiënten die op een bepaalde polikliniek komen. Dat is praktisch, maar kan de representativiteit beperken.
 
-Let op: representativiteit is niet één algemeen kenmerk van een dataset. Een steekproef kan voor de ene vraag goed bruikbaar zijn en voor een andere vraag minder geschikt.
+Let op: Een dataset kan voor de ene vraag goed bruikbaar zijn en voor een andere vraag minder geschikt. Een gedane steekproef kan dus representatief zijn voor bepaalde vragen en voor andere niet.
 
 ### 2.3 Toevalsvariatie: een andere steekproef geeft andere uitkomsten
 
@@ -91,7 +89,7 @@ populatie_gemiddelde <- mean(populatie)
 steekproef_groottes <- c(20, 100)
 resultaten <- do.call(rbind, lapply(steekproef_groottes, function(n) {
   data.frame(
-    steekproefgrootte = paste("n =", n),
+    steekproefgrootte = paste("n in elke steekproef =", n),
     gemiddelde = replicate(1000, mean(sample(populatie, n)))
   )
 }))
@@ -109,9 +107,9 @@ ggplot(resultaten, aes(x = gemiddelde)) +
   )
 ```
 
-Een grotere steekproef verkleint doorgaans de invloed van toevalsvariatie op een gemiddelde of percentage. Dat geldt onder vergelijkbare omstandigheden, bijvoorbeeld wanneer de steekproeven op dezelfde manier worden getrokken.
+Een grotere steekproef verkleint meestal de invloed van toevalsvariatie op een gemiddelde of percentage. Dat geldt onder vergelijkbare omstandigheden, bijvoorbeeld wanneer de steekproeven op dezelfde manier worden getrokken.
 
-**Een grotere steekproef lost selectief of onjuist verzamelen van gegevens niet op.** Als vooral patiënten met ernstige COPD worden geïncludeerd, maakt het toevoegen van nog veel meer vergelijkbare patiënten de steekproef niet automatisch representatief voor alle mensen met COPD.
+**Een grotere steekproef lost selectief of onjuist verzamelen van gegevens niet op.** Als vooral patiënten met zeer ernstige COPD worden geïncludeerd, maakt het toevoegen van nog meer vergelijkbare ernstige COPD patiënten de steekproef niet automatisch representatief voor alle mensen met COPD. Er zijn namelijk ook mensen met COPD met minder klachten.
 
 ### 2.4 Generaliseerbaarheid: gelden de resultaten ook voor andere patiënten?
 
@@ -124,21 +122,24 @@ Generaliseerbaarheid beschrijft in hoeverre onderzoeksresultaten toepasbaar zijn
 - Vonden de metingen plaats in een gespecialiseerd centrum of in de dagelijkse zorg?
 - Lijkt de patiënt op wie je de uitkomst wilt toepassen voldoende op de deelnemers aan het onderzoek?
 
-**Voorbeeld:** een behandeling voor COPD blijkt in een onderzoek effectief bij deelnemers uit gespecialiseerde longcentra. Dat is relevante informatie. Voor toepassing bij een patiënt in de huisartsenpraktijk moet je echter nagaan of de onderzochte patiënten vergelijkbaar zijn en of de behandeling in de dagelijkse praktijk op dezelfde manier kan worden uitgevoerd.
+**Voorbeeld:** een behandeling blijkt in een onderzoek effectiever bij mensen met een specifiek type slagaderverkalking na een biopt in een gespecialiseerd ziekenhuis. Dat is relevante informatie. Voor toepassing bij een patiënt in de huisartsenpraktijk moet je echter nagaan of de onderzochte patiënten vergelijkbaar zijn en of het type slagaderverkalking bij deze patiënten uberhaupt (makkelijk) te bepalen is.
+
+Generaliseerbaarheid gaat dus ook over de vraag of de patiënten in de onderzoeks- of trainingsdata voldoende lijken op de patiënt voor wie je de uitkomst wilt gebruiken.
 
 ### 2.5 Denkstap bij het lezen van een artikel
 
-Een artikel vermeldt: *“De gemiddelde systolische bloeddruk daalde na behandeling met 8 mmHg.”*
+Een artikel vermeldt: *“Het SMART2-risicomodel identificeerde twee keer zoveel patiënten bij wie een intensieve behandeling geïndiceerd bleek.”*
 
 Voordat je deze uitkomst toepast, wil je weten:
 - Bij welke patiënten is dit gemeten?
 - Hoeveel patiënten deden mee?
 - Hoe zijn zij geselecteerd?
 - Was er een vergelijkingsgroep?
-- Hoe lang na de behandeling werd de bloeddruk gemeten?
-- Is de onderzochte groep vergelijkbaar met de patiënten voor wie je de behandeling overweegt?
+- Is de onderzochte groep vergelijkbaar met de patiënten voor wie je de tool of behandeling overweegt?
 
-Het getal van 8 mmHg is pas goed te interpreteren wanneer je deze context kent.
+Een conclussie is pas goed te interpreteren wanneer je deze context kent.
+
+Stel dezelfde vragen wanneer een artikel bijvoorbeeld stelt *“De gemiddelde systolische bloeddruk daalde na behandeling met 8 mmHg.”*.
 
 ### 2.6 Samenvatting
 
@@ -152,7 +153,7 @@ Het getal van 8 mmHg is pas goed te interpreteren wanneer je deze context kent.
 
 ### 3.1 Van ruwe gegevens naar een eerste beeld
 
-Voordat je een dataset interpreteert, is het verstandig deze systematisch te verkennen. Dit wordt ook wel *exploratory data analysis* genoemd. Het doel is niet om meteen een verklaring te vinden, maar om eerst te begrijpen wat er in de gegevens staat.
+Voordat je een dataset interpreteert, is het verstandig deze systematisch te verkennen. Dit wordt ook wel *exploratory data analysis* genoemd. In data science is dit een vaste eerste stap: eerst de gegevens begrijpen, daarna pas verder interpreteren. Het doel is niet om meteen een verklaring te vinden, maar om eerst te begrijpen wat er in de gegevens staat.
 
 Bij medische gegevens kun je denken aan bloeddruk, hartfrequentie, leeftijd, cholesterol, FEV1, rookstatus of ziekenhuisopnameduur. Een systematische verkenning helpt je onder andere om te ontdekken of waarden ontbreken, of er onwaarschijnlijke metingen zijn en of groepen opvallend van elkaar verschillen.
 
@@ -168,10 +169,10 @@ Een praktische volgorde is:
 
 ### 3.2 Variabelen: wat wordt er gemeten?
 
-Een variabele is een kenmerk dat per persoon of observatie kan verschillen. De basisindeling in categorische en numerieke variabelen is behandeld in BvGZ.
+Een variabele is een kenmerk dat per persoon of observatie kan verschillen. De basisindeling in [categorische en numerieke variabelen](01-BvGZ.qmd#sec-type-gegevens) is behandeld in [BvGZ](01-BvGZ.qmd#sec-bvgz).
 
-- **Categorische variabelen** delen personen in groepen in, bijvoorbeeld rookstatus, behandelgroep of aanwezigheid van een diagnose.
-- **Numerieke variabelen** geven een hoeveelheid of meting weer, bijvoorbeeld leeftijd, systolische bloeddruk of FEV1.
+- **[Categorische variabelen](01-BvGZ.qmd#sec-type-gegevens)** delen personen in groepen in, bijvoorbeeld rookstatus, behandelgroep of aanwezigheid van een diagnose.
+- **[Numerieke variabelen](01-BvGZ.qmd#sec-type-gegevens)** geven een hoeveelheid of meting weer, bijvoorbeeld leeftijd, systolische bloeddruk of FEV1.
 - **Discreet numeriek:** een telbare hoeveelheid, zoals het aantal ziekenhuisopnames.
 - **Continu numeriek:** een meting die in principe veel waarden binnen een bereik kan aannemen, zoals bloeddruk of lengte.
 
@@ -191,14 +192,14 @@ Ontbrekende waarden mag je niet automatisch vervangen door nul of door het gemid
 
 ### 3.4 Beschrijvende statistiek toepassen
 
-In BvGZ zijn gemiddelde, mediaan, bereik, standaarddeviatie en interkwartielafstand besproken. Hier gebruiken we die maten om medische gegevens te vergelijken.
+In [BvGZ](01-BvGZ.qmd#sec-bvgz) zijn [gemiddelde](01-BvGZ.qmd#sec-gemiddelde-mediaan), [mediaan](01-BvGZ.qmd#sec-gemiddelde-mediaan), [bereik](01-BvGZ.qmd#sec-spreidingsbreedte), [standaarddeviatie](01-BvGZ.qmd#sec-standaarddeviatie) en [interkwartielafstand](01-BvGZ.qmd#sec-iqr) besproken. Hier gebruiken we die maten om medische gegevens te vergelijken.
 
-- Het **gemiddelde** geeft het rekenkundig gemiddelde van de waarden.
-- De **mediaan** is de middelste waarde na rangschikking.
-- De **standaarddeviatie (SD)** beschrijft hoe sterk waarden rond het gemiddelde verspreid liggen.
-- De **interkwartielafstand (IQR)** beschrijft de spreiding van de middelste helft van de waarden.
+- Het **[gemiddelde](01-BvGZ.qmd#sec-gemiddelde-mediaan)** geeft het rekenkundig gemiddelde van de waarden.
+- De **[mediaan](01-BvGZ.qmd#sec-gemiddelde-mediaan)** is de middelste waarde na rangschikking.
+- De **[standaarddeviatie (SD)](01-BvGZ.qmd#sec-standaarddeviatie)** beschrijft hoe sterk waarden rond het gemiddelde verspreid liggen.
+- De **[interkwartielafstand (IQR)](01-BvGZ.qmd#sec-iqr)** beschrijft de spreiding van de middelste helft van de waarden.
 
-Het gemiddelde kan sterk worden beïnvloed door uitschieters. Bij een scheve verdeling of duidelijke uitschieters kan de mediaan met IQR daarom een beter beeld geven. Bij een ongeveer symmetrische verdeling kan gemiddelde met SD passend zijn.
+Het gemiddelde kan sterk worden beïnvloed door [uitschieters](01-BvGZ.qmd#sec-uitschieters). Bij een scheve verdeling of duidelijke uitschieters kan de mediaan met IQR daarom een beter beeld geven. Bij een ongeveer symmetrische verdeling kan gemiddelde met SD passend zijn.
 
 **Fictief voorbeeld: bloeddruk in twee groepen**
 
@@ -228,15 +229,15 @@ De tabel beschrijft de bloeddruk in beide groepen. Je ziet niet alleen de gemidd
 
 ### 3.5 Kies een grafiek die bij je vraag past
 
-De belangrijkste grafiektypen zijn in BvGZ geïntroduceerd. Hieronder ligt de nadruk op het toepassen ervan bij medische vragen.
+De belangrijkste [grafiektypen](01-BvGZ.qmd#sec-welke-grafiek) zijn in [BvGZ](01-BvGZ.qmd#sec-bvgz) geïntroduceerd. Hieronder ligt de nadruk op het toepassen ervan bij medische vragen.
 
 | Vraag | Geschikte grafiek | Voorbeeld |
 |---|---|---|
-| Hoe is één numerieke variabele verdeeld? | Histogram | Verdeling van FEV1 |
-| Hoe verschilt een numerieke variabele tussen groepen? | Boxplot | Bloeddruk per behandelgroep |
-| Hoe vaak komt een categorie voor? | Staafdiagram | Aantal patiënten per rookstatus |
-| Hoe hangen twee numerieke variabelen samen? | Spreidingsdiagram | Leeftijd en systolische bloeddruk |
-| Hoe verandert een meting in de tijd? | Lijngrafiek | Hartfrequentie tijdens inspanning |
+| Hoe is één numerieke variabele verdeeld? | [Histogram](01-BvGZ.qmd#sec-histogram) | Verdeling van FEV1 |
+| Hoe verschilt een numerieke variabele tussen groepen? | [Boxplot](01-BvGZ.qmd#sec-boxplot) | Bloeddruk per behandelgroep |
+| Hoe vaak komt een categorie voor? | [Staafdiagram](01-BvGZ.qmd#sec-histogram) | Aantal patiënten per rookstatus |
+| Hoe hangen twee numerieke variabelen samen? | [Spreidingsdiagram](01-BvGZ.qmd#sec-spreidingsdiagram) | Leeftijd en systolische bloeddruk |
+| Hoe verandert een meting in de tijd? | [Lijngrafiek](01-BvGZ.qmd#sec-lijngrafiek) | Hartfrequentie tijdens inspanning |
 
 #### Histogram: de verdeling bekijken
 
@@ -251,7 +252,7 @@ ggplot(bloeddruk, aes(x = systolisch)) +
   )
 ```
 
-Let bij een histogram op de vorm van de verdeling, de spreiding, eventuele uitschieters en mogelijke meerdere pieken. De gekozen klassebreedte beïnvloedt hoe de verdeling eruitziet.
+Let bij een [histogram](01-BvGZ.qmd#sec-histogram) op de vorm van de verdeling, de spreiding, eventuele uitschieters en mogelijke meerdere pieken. De gekozen klassebreedte beïnvloedt hoe de verdeling eruitziet.
 
 #### Boxplot: groepen vergelijken
 
@@ -267,7 +268,7 @@ ggplot(bloeddruk, aes(x = groep, y = systolisch, fill = groep)) +
   )
 ```
 
-Een boxplot toont de mediaan, de kwartielen en mogelijke uitschieters volgens de gebruikte boxplotdefinitie. Een punt buiten de whiskers is niet automatisch een meetfout. Controleer zo'n waarde in de context van de dataset.
+Een [boxplot](01-BvGZ.qmd#sec-boxplot) toont de [mediaan](01-BvGZ.qmd#sec-gemiddelde-mediaan), de kwartielen en mogelijke [uitschieters](01-BvGZ.qmd#sec-uitschieters) volgens de gebruikte boxplotdefinitie. Een punt buiten de whiskers is niet automatisch een meetfout. Controleer zo'n waarde in de context van de dataset.
 
 ### 3.6 Vergelijk groepen zorgvuldig
 
@@ -282,7 +283,7 @@ Een groepsgemiddelde beschrijft niet iedere individuele patiënt. Twee groepen k
 
 ### 3.7 Samenvatting
 
-Verken een dataset in een vaste volgorde: controleer de opbouw en datakwaliteit, bepaal het type variabelen, vat gegevens samen en kies passende grafieken. Beschrijf eerst wat je daadwerkelijk ziet. Een patroon in de gegevens is een aanleiding voor verder onderzoek, niet automatisch een verklaring.
+Verken een dataset in een vaste volgorde: controleer de opbouw en datakwaliteit, bepaal het type variabelen, vat gegevens samen en kies passende grafieken. Beschrijf eerst wat je daadwerkelijk ziet. Een patroon in de gegevens is een aanleiding voor verder onderzoek, niet automatisch een verklaring. Goede dataverkenning en controle op datakwaliteit zijn daarmee ook een voorwaarde om scores of modellen op waarde te schatten.
 
 ## 4. Verbanden: correlatie en causaliteit
 
@@ -337,6 +338,8 @@ Een verband tussen twee variabelen betekent niet automatisch dat de ene variabel
 
 **Medisch voorbeeld:** in een observationeel onderzoek wordt een verband gevonden tussen lichamelijke activiteit en bloeddruk. Leeftijd, medicatiegebruik, voeding of bestaande gezondheid kunnen samenhangen met zowel lichamelijke activiteit als bloeddruk. Daardoor kan het gevonden verband mede door deze andere factoren worden verklaard.
 
+Ook een model dat goed voorspelt, toont daarmee nog geen oorzakelijk verband: voorspelling en verklaring zijn niet hetzelfde.
+
 ### 4.4 Confounding: een derde factor speelt mee
 
 Een confounder is een derde variabele die samenhangt met zowel de mogelijke oorzaak (blootstelling) als de uitkomst en daardoor het verband tussen beide kan vertekenen.
@@ -364,7 +367,7 @@ Het onderzoeksontwerp bepaalt dus mede hoe sterk een oorzaak-gevolgconclusie kan
 
 ### 4.7 Samenvatting
 
-Correlatie beschrijft een verband, maar bewijst geen oorzaak-gevolgrelatie. Denk bij een gevonden verband aan confounding, omgekeerde causaliteit en toeval. Bekijk de gegevens en het onderzoeksontwerp voordat je een causale conclusie trekt.
+Correlatie beschrijft een verband, maar bewijst geen oorzaak-gevolgrelatie. Denk bij een gevonden verband aan confounding, omgekeerde causaliteit en toeval. Bekijk de gegevens en het onderzoeksontwerp voordat je een causale conclusie trekt. Een sterke samenhang in data rechtvaardigt dus geen causale conclusie, ook niet wanneer die samenhang in een voorspelmodel wordt gebruikt.
 
 ## 5. Wanneer kunnen cijfers misleiden?
 
@@ -382,7 +385,7 @@ Let vooral op de volgende vragen:
 
 ### 5.2 Absolute en relatieve verschillen
 
-Een relatief verschil kan indrukwekkend klinken, terwijl het absolute verschil klein is.
+Een [relatief verschil](01-BvGZ.qmd#sec-absoluut-relatief) kan indrukwekkend klinken, terwijl het absolute verschil klein is.
 
 **Fictief voorbeeld:** in een groep zonder behandeling krijgen 2 van de 100 personen een bepaalde uitkomst. In een behandelde groep is dat 1 van de 100 personen.
 
@@ -416,12 +419,12 @@ Vraag altijd: **tien van hoeveel?** Controleer ook of de groepen op dezelfde man
 
 Een gemiddelde beschrijft een groep, maar niet iedere individuele patiënt. Twee groepen kunnen hetzelfde gemiddelde hebben en toch sterk verschillen in spreiding. Ook kunnen twee groepen verschillende gemiddelden hebben terwijl de individuele waarden sterk overlappen.
 
-Daarom is het vaak belangrijk om naast een gemiddelde ook de spreiding of de verdeling te bekijken. Denk aan SD, IQR, een boxplot of een histogram. Welke samenvatting passend is, hangt af van de vorm van de verdeling en de onderzoeksvraag.
+Daarom is het vaak belangrijk om naast een gemiddelde ook de spreiding of de verdeling te bekijken. Denk aan [SD](01-BvGZ.qmd#sec-standaarddeviatie), [IQR](01-BvGZ.qmd#sec-iqr), een [boxplot](01-BvGZ.qmd#sec-boxplot) of een [histogram](01-BvGZ.qmd#sec-histogram). Welke samenvatting passend is, hangt af van de vorm van de verdeling en de onderzoeksvraag.
 
 ### 5.5 Misleidende grafieken
 
 Grafieken kunnen verschillen groter of kleiner laten lijken dan ze zijn. Let bijvoorbeeld op:
-- Een y-as die niet bij nul begint in een staafdiagram.
+- Een [y-as die niet bij nul begint](01-BvGZ.qmd#sec-afgesneden-as) in een staafdiagram.
 - Verschillende schaalverdelingen in grafieken die met elkaar worden vergeleken.
 - Het weglaten van relevante groepen of meetmomenten.
 - Onduidelijke eenheden.
@@ -470,6 +473,8 @@ Selectiebias ontstaat wanneer de manier waarop deelnemers in een onderzoek terec
 **Voorbeeld:** een online vragenlijst over rookgedrag wordt verspreid via een gezondheidsplatform. Mensen die veel met gezondheid bezig zijn, reageren mogelijk vaker dan mensen die weinig met gezondheid bezig zijn. De antwoorden hoeven daardoor geen goede afspiegeling te zijn van de gehele bevolking.
 
 **Medisch voorbeeld:** een onderzoek naar herstel na een hartinfarct includeert alleen patiënten die naar een gespecialiseerd centrum zijn verwezen. Patiënten die elders worden behandeld of die niet naar het centrum kunnen komen, ontbreken. De onderzochte groep kan daardoor verschillen van alle mensen met een hartinfarct.
+
+Hetzelfde speelt bij gegevens uit elektronische patiëntendossiers, apps of wearables: wie wél in die data zit, bepaalt mede voor wie de bevindingen gelden.
 
 ### 6.3 Informatiebias en meetfouten
 
@@ -533,7 +538,7 @@ Gebruik de volgende vragen bij een artikel, tabel, figuur of nieuwsbericht:
 
 1. **Onderzoeksvraag:** welke vraag probeert het onderzoek te beantwoorden?
 2. **Populatie:** op welke patiënten heeft de conclusie betrekking?
-3. **Steekproef:** wie zijn daadwerkelijk onderzocht en hoe zijn zij geselecteerd?
+3. **Steekproef:** wie zijn daadwerkelijk onderzocht en hoe zijn zij geselecteerd? Bij een score of model: op welke patiëntenpopulatie is dit gebaseerd, en lijkt die op jouw patiënt?
 4. **Variabelen:** wat is gemeten en hoe zijn de variabelen gedefinieerd?
 5. **Onderzoeksontwerp:** gaat het om observationeel onderzoek of een interventiestudie?
 6. **Resultaten:** wat zijn de aantallen, percentages en verschillen tussen groepen?
@@ -576,7 +581,7 @@ Een goede beoordeling van medisch onderzoek combineert statistisch inzicht met k
 De belangrijkste boodschap van dit naslagwerk is dat statistische uitkomsten nooit los van hun context mogen worden geïnterpreteerd.
 
 - **Steekproef en populatie:** voor wie gelden de resultaten?
-- **Dataverkenning:** wat laten de gegevens daadwerkelijk zien en hoe betrouwbaar zijn ze?
+- **Dataverkenning:** wat laten de gegevens daadwerkelijk zien en hoe betrouwbaar zijn ze? Ook wanneer die data achter een score of model liggen?
 - **Correlatie en causaliteit:** is er alleen een verband of is een oorzakelijke conclusie gerechtvaardigd?
 - **Misleidende statistiek:** worden cijfers en grafieken volledig en eerlijk gepresenteerd?
 - **Bias:** kunnen systematische fouten de uitkomsten vertekenen?
@@ -588,12 +593,14 @@ Gebruik de onderstaande vragen om te controleren of je de belangrijkste denkstap
 
 ### Vraag 1 – Steekproef en populatie
 
-Een onderzoek naar een nieuwe COPD-behandeling includeert 250 patiënten uit twee academische ziekenhuizen. De onderzoekers concluderen dat de behandeling geschikt is voor alle mensen met COPD.
+Een onderzoek naar een predictie model wat voorspelt welke COPD patient het meeste baat heeft bij welke COPD-behandeling includeert 250 patiënten uit twee academische ziekenhuizen. De onderzoekers concluderen dat hun predictie model geschikt is voor alle mensen met COPD.
 
 **Welke vraag is het belangrijkst bij het beoordelen van deze conclusie?**
 
 ::: {.callout-note collapse="true" title="Bekijk de uitwerking"}
-Zijn de deelnemers uit de academische ziekenhuizen voldoende vergelijkbaar met de volledige doelpopulatie, bijvoorbeeld met patiënten die in de eerste lijn worden behandeld? De resultaten kunnen waardevol zijn, maar de toepasbaarheid op alle mensen met COPD moet afzonderlijk worden beoordeeld.
+Zijn de deelnemers uit de academische ziekenhuizen voldoende vergelijkbaar met de volledige doelpopulatie, bijvoorbeeld met patiënten die in de eerste lijn worden behandeld? Het ontwikkelde model kan waardevol zijn voor academische centra, maar de toepasbaarheid op alle mensen met COPD moet afzonderlijk worden beoordeeld. 
+
+Uit onderzoek blijft bijvoorbeeld dat slechts een klein deel van alle COPD-patiënten in de praktijk voldeed aan de criteria van grote behandeltrials (Kruis et al., 2014). De selectie criteria bij deze trails zorgde dus voor een niet-representatieve steekproef om iets te zeggen voor alle mensen met COPD.
 :::
 
 ### Vraag 2 – Toevalsvariatie
@@ -608,22 +615,26 @@ Nee. Verschillende steekproeven bevatten meestal niet exact dezelfde personen. D
 
 ### Vraag 3 – Dataverkenning
 
-In een dataset met bloeddrukmetingen komt één waarde van 850 mmHg voor.
+In een dataset met bloeddrukmetingen in rust komt een bovendruk waarde van 850 mmHg voor.
 
 **Wat is een verstandige eerste stap?**
 
 ::: {.callout-note collapse="true" title="Bekijk de uitwerking"}
-Controleer de oorspronkelijke registratie, de eenheid en de meetmethode. De waarde is onwaarschijnlijk en kan op een invoer- of meetfout wijzen. Verwijder of verander de waarde niet zonder na te gaan wat er is gebeurd.
+Controleer de oorspronkelijke registratie, de eenheid en de meetmethode. Deze waarde is extreem onwaarschijnlijk en wijst mogelijk op een invoer- of meetfout. Verwijder of verander de waarde niet zomar zonder eerst na te gaan wat er is gebeurd. We mogen een onwaarschijnlijke waarde niet zomaar verwijderen.
+
+Maar, ter vergelijking: MacDougall et al. (1985) maten tijdens zwaar gewichtheffen bij één deelnemer een systolische bloeddruk van ongeveer 480 mmHg tijdens een leg press. Zelfs onder zulke extreme omstandigheden ligt 850 mmHg daar ver boven. We zouden deze waarde van 850 mmHg dus mogelijk wel verwijderen. Zulke onwaarschijnlijke waarden komen overigens vaker voor in elektronische patiëntendossiers. In een datakwaliteitsstudie vonden Wang et al. (2019) duizenden bloeddrukwaarden boven de 500 mmHg.
 :::
 
 ### Vraag 4 – Correlatie en causaliteit
 
-Een onderzoek vindt dat patiënten met een lagere FEV1 vaker worden opgenomen in het ziekenhuis.
+In dossierdata hangt kenmerk Y sterk samen met longaanvallen. Een arts stelt voor om op basis daarvan alle patiënten met Y preventief te behandelen. 
 
-**Bewijst dit dat een lagere FEV1 de ziekenhuisopname veroorzaakt?**
+**Welke denkfout dreigt hier? Moeten we iedereen met kenmerk Y gaan behandelen?**
 
 ::: {.callout-note collapse="true" title="Bekijk de uitwerking"}
-Nee. Er is een verband gevonden, maar andere factoren, zoals ziekte-ernst, leeftijd of bijkomende aandoeningen, kunnen een rol spelen. Ook moet je kijken naar de onderzoeksopzet en de volgorde van metingen.
+Samenhang is geen bewijs dat Y de aanvallen veroorzaakt. Andere factoren of de onderzoeksopzet kunnen het verband verklaren. We moeten correlatie en causaliteit uit elkaar houden.
+
+Een duidelijk voorbeeld: Jensen et al. (1994) maakten MRI-scans van de wervelkolom bij 98 mensen **zonder** rugpijn. Slechts 36% had een hele set normale tussenwervelschijven; bij een groot deel werden schijfafwijkingen (zoals bulging) gezien. De bevinding schijfafwijking betekent dus niet dat al deze mensen baat hebben bij een hernia-operatie, ze hebben namelijk ook helemaal geen klachten. Een kenmerk rechtvaardigt dus geen automatische behandeling.
 :::
 
 ### Vraag 5 – Absolute en relatieve verschillen
@@ -633,7 +644,7 @@ Een nieuwsbericht meldt dat een behandeling het risico op een uitkomst met 50% v
 **Welke aanvullende informatie maakt de claim beter interpreteerbaar?**
 
 ::: {.callout-note collapse="true" title="Bekijk de uitwerking"}
-Vermeld ook de absolute daling: 1 procentpunt, van 2% naar 1%. Geef daarnaast de aantallen deelnemers, de meetperiode en de onderzochte patiëntengroep.
+Vermeld ook de absolute daling: 1 procentpunt, van 2% naar 1%. Geef daarnaast de aantallen deelnemers, de meetperiode en de onderzochte patiëntengroep. Bij de JUPITER-studie naar een cholesterolverlager werd in de media vaak een relatieve risicodaling van ongeveer 50% benadrukt, terwijl de absolute winst veel kleiner was (zie o.a. Gigerenzer et al., 2007).
 :::
 
 ### Vraag 6 – Selectiebias
@@ -643,17 +654,23 @@ Een vragenlijst over gezondheid wordt alleen verspreid onder bezoekers van een g
 **Waarom kan dit de resultaten vertekenen?**
 
 ::: {.callout-note collapse="true" title="Bekijk de uitwerking"}
-Bezoekers van een gezondheidswebsite kunnen gemiddeld meer met gezondheid bezig zijn dan mensen die de website niet bezoeken. Zij hebben daardoor mogelijk een andere leefstijl of andere gezondheidskenmerken. De antwoorden hoeven geen goede afspiegeling van de gehele bevolking te zijn.
+Bezoekers van een gezondheidswebsite kunnen gemiddeld meer met gezondheid bezig zijn dan mensen die de website niet bezoeken. Zij hebben daardoor mogelijk een andere leefstijl of andere gezondheidskenmerken. De antwoorden hoeven geen goede afspiegeling van de gehele bevolking te zijn. 
+
+Een klassiek voorbeeld is de Literary Digest-peiling uit 1936: miljoenen antwoorden voorspelden toch de verkeerde verkiezingsuitslag in de Verenigde Staten door selectie- en non-responsebias. Bij online gezondheidsvragenlijsten speelt dezelfde zelfselectie (Eysenbach, 2004).
 :::
 
 ### Vraag 7 – Conclusie beoordelen
 
-Een onderzoek vindt dat patiënten die een bepaald geneesmiddel gebruiken vaker worden opgenomen. De onderzoekers concluderen dat het geneesmiddel ziekenhuisopnames veroorzaakt.
+Een observationeel onderzoek vindt dat vrouwen met diabetes vaker borstkanker krijgen dan vrouwen zonder diabetes. De onderzoekers concluderen dat diabetes borstkanker veroorzaakt.
 
 **Welke alternatieve verklaring moet je in ieder geval overwegen?**
 
 ::: {.callout-note collapse="true" title="Bekijk de uitwerking"}
-Confounding door ziekte-ernst. Patiënten met ernstigere ziekte kunnen vaker het geneesmiddel krijgen én een grotere kans op ziekenhuisopname hebben. Het gevonden verband bewijst daarom niet dat het geneesmiddel de opname veroorzaakt.
+Detection bias (meer opsporing). Vrouwen met diabetes komen vaker bij de dokter en kunnen daardoor vaker mammografie of ander onderzoek krijgen. Dan wordt bestaande kanker eerder ontdekt, zonder dat diabetes de kanker hoeft te veroorzaken. 
+
+In Taiwanese gegevens verdween een groot deel van het verband tussen diabetes en borstkanker na correctie voor dit soort onderzoeken (Tseng, 2014). 
+
+Ook confounding (bijvoorbeeld door leeftijd of overgewicht) blijft een mogelijke verklaring. Het verband bewijst dus niet automatisch causaliteit.
 :::
 
 ### Vraag 8 – Kritisch lezen
@@ -663,6 +680,8 @@ Een figuur laat zien dat de gemiddelde bloeddruk in een behandelgroep daalt. Er 
 **Noem twee redenen waarom je voorzichtig moet zijn met de conclusie dat de behandeling werkt.**
 
 ::: {.callout-note collapse="true" title="Bekijk de uitwerking"}
-Zonder het aantal deelnemers en de spreiding is niet duidelijk hoe stabiel of representatief het gemiddelde is. Zonder vergelijkingsgroep kun je bovendien niet goed beoordelen of de daling door de behandeling komt of bijvoorbeeld door spontaan herstel, andere zorg of veranderingen in meetomstandigheden.
+Zonder het aantal deelnemers en de spreiding is niet duidelijk hoe stabiel of representatief het gemiddelde is. Zonder vergelijkingsgroep kun je bovendien niet goed beoordelen of de daling door de behandeling komt of bijvoorbeeld door spontaan herstel, andere zorg of veranderingen in meetomstandigheden. 
+
+Bij bloeddruk daalt een hoog eerste meetgemiddelde bij herhaalde meting vaak al door regressie naar het midden, ook zonder behandeling (Bland & Altman, 1994).
 :::
 
