@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Basis van Gezondheid en Ziekte – Naslagwerk Statistiek</title>
+<title>1&nbsp; Basis van Gezondheid en Ziekte – Naslagwerk Data Science &amp; Statistiek</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -133,7 +133,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" aria-label="Website">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Naslagwerk Statistiek</a> 
+      <a href="./">Naslagwerk Data Science &amp; Statistiek</a> 
         <div class="sidebar-tools-main">
     <a href="https://github.com/EducationTeamJC/naslagwerk_gnk" title="Broncode" class="quarto-navigation-tool px-1" aria-label="Broncode"><i class="bi bi-github"></i></a>
 </div>
@@ -174,12 +174,12 @@ window.Quarto = {
   </ul></li>
   <li><a href="#statistiek-in-de-geneeskunde" id="toc-statistiek-in-de-geneeskunde" class="nav-link" data-scroll-target="#statistiek-in-de-geneeskunde"><span class="header-section-number">1.2</span> Statistiek in de geneeskunde</a>
   <ul class="collapse">
-  <li><a href="#beschrijven-en-conclusies-trekken" id="toc-beschrijven-en-conclusies-trekken" class="nav-link" data-scroll-target="#beschrijven-en-conclusies-trekken">Beschrijven en conclusies trekken</a></li>
-  <li><a href="#type-gegevens" id="toc-type-gegevens" class="nav-link" data-scroll-target="#type-gegevens">Type gegevens</a></li>
-  <li><a href="#centrummaten" id="toc-centrummaten" class="nav-link" data-scroll-target="#centrummaten">Centrummaten</a></li>
+  <li><a href="#sec-beschrijvend" id="toc-sec-beschrijvend" class="nav-link" data-scroll-target="#sec-beschrijvend">Beschrijven en conclusies trekken</a></li>
+  <li><a href="#sec-type-gegevens" id="toc-sec-type-gegevens" class="nav-link" data-scroll-target="#sec-type-gegevens">Type gegevens</a></li>
+  <li><a href="#sec-centrummaten" id="toc-sec-centrummaten" class="nav-link" data-scroll-target="#sec-centrummaten">Centrummaten</a></li>
   <li><a href="#spreidingsmaten" id="toc-spreidingsmaten" class="nav-link" data-scroll-target="#spreidingsmaten">Spreidingsmaten</a></li>
   <li><a href="#gemiddelde-en-standaarddeviatie-waarom-beide" id="toc-gemiddelde-en-standaarddeviatie-waarom-beide" class="nav-link" data-scroll-target="#gemiddelde-en-standaarddeviatie-waarom-beide">Gemiddelde en standaarddeviatie, waarom beide?</a></li>
-  <li><a href="#welke-grafiek" id="toc-welke-grafiek" class="nav-link" data-scroll-target="#welke-grafiek">Welke grafiek?</a></li>
+  <li><a href="#sec-welke-grafiek" id="toc-sec-welke-grafiek" class="nav-link" data-scroll-target="#sec-welke-grafiek">Welke grafiek?</a></li>
   <li><a href="#hoe-lees-ik-een-onderzoek" id="toc-hoe-lees-ik-een-onderzoek" class="nav-link" data-scroll-target="#hoe-lees-ik-een-onderzoek">Hoe lees ik een onderzoek?</a></li>
   <li><a href="#wees-scherp-op" id="toc-wees-scherp-op" class="nav-link" data-scroll-target="#wees-scherp-op">Wees scherp op</a></li>
   </ul></li>
@@ -191,7 +191,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Basis van Gezondheid en Ziekte</span></h1>
+<h1 class="title"><span id="sec-bvgz" class="quarto-section-identifier"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Basis van Gezondheid en Ziekte</span></span></h1>
 </div>
 
 
@@ -208,11 +208,11 @@ window.Quarto = {
 </header>
 
 
-<p>Welkom bij het statistiek deel van het vak Basis van Gezondheid en Ziekte (BvGZ)! In dit deel maak je voor het eerst kennis met statistiek in de geneeskunde en ontdek je hoe je statistiek kunt gebruiken om medische gegevens te begrijpen.</p>
-<p>Als arts kom je dagelijks gegevens tegen: bloedwaarden, meetresultaten en onderzoek naar nieuwe behandelingen. Statistiek helpt je deze gegevens te beschrijven en te interpreteren, zodat je ze kunt gebruiken bij het beoordelen van de gezondheid van patiënten en het nemen van medische beslissingen.</p>
+<p>Welkom bij het data science en statistiek deel van het vak Basis van Gezondheid en Ziekte (BvGZ)! In dit deel maak je voor het eerst kennis met data science en statistiek in de geneeskunde en ontdek je hoe je beide kunt gebruiken om medische gegevens te begrijpen.</p>
+<p>Als arts kom je dagelijks gegevens tegen: bloedwaarden, meetresultaten en onderzoek naar nieuwe behandelingen. Daarnaast, met de opkomst van machine learning in de kliniek, zul je als arts ook te maken krijgen met AI applicaties of diagnostische predictie modellen. Data science en statistiek helpt je gegevens te beschrijven en te interpreteren en te begrijpen wat onderligt aan machine learning voorspellingen, zodat je deze informatie kunt gebruiken bij het beoordelen van de gezondheid van patiënten en het nemen van medische beslissingen.</p>
 <p>We beginnen met het leren lezen en beschrijven van gegevens. Voordat je conclusies kunt trekken, moet je immers eerst patronen herkennen en deze helder kunnen uitleggen. Zo leer je medische informatie kritisch te beoordelen en hierover met patiënten en collega’s te communiceren.</p>
-<p>We beginnen met de leerdoelen waarop ons onderwijs is gebaseerd. Daarna volgt het naslagwerk, waarin je alles kunt terugvinden wat tijdens de hoorcolleges en werkcolleges wordt behandeld.</p>
-<p>Tot slot willen we benadrukken dat statistiek een belangrijk hulpmiddel is in de wetenschappelijke gereedschapskist van een arts. Maar, je leert statistiek niet alleen door de theorie te bestuderen, maar vooral door deze herhaaldelijk toe te passen en te blijven oefenen. Dat kan in het begin best lastig zijn en soms frustratie opleveren. Dat is een normaal onderdeel van het leerproces. Door te oefenen, fouten te maken en hiervan te leren, ontwikkel je stap voor stap je vaardigheden (Nelson &amp; Eliasz, 2023).</p>
+<p>De volgorde van dit hoofstuk is als volgt: eerst zie je de leerdoelen waarop ons onderwijs is gebaseerd. Daarna volgt het naslagwerk, waarin je alles kunt terugvinden wat tijdens de hoorcolleges en werkcolleges wordt behandeld.</p>
+<p>Tot slot willen we benadrukken dat data science en statistiek belangrijk hulpmiddelen zijn in de wetenschappelijke gereedschapskist van een arts. Maar, je leert beide niet alleen door de theorie te bestuderen, maar vooral door deze herhaaldelijk toe te passen en te blijven oefenen. Dat kan in het begin best lastig zijn en soms frustratie opleveren. Dat is een normaal onderdeel van het leerproces. Door te oefenen, fouten te maken en hiervan te leren, ontwikkel je stap voor stap je vaardigheden (Nelson &amp; Eliasz, 2023).</p>
 <p>Veel leerplezier!</p>
 <section id="leerdoelen" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="leerdoelen"><span class="header-section-number">1.1</span> Leerdoelen</h2>
@@ -247,14 +247,14 @@ Figuur&nbsp;1.1: Een daling van gemiddelde systolische bloeddruk van 160 naar 14
 </div>
 </div>
 <p>Die daling alleen bewijst niet dat de behandeling werkt. Er ontbreekt onder meer een vergelijkingsgroep, informatie over spreiding tussen patiënten, en zekerheid dat het verschil niet door tijd of andere zorg komt. Eerst beschrijf je wat je ziet. Daarna pas trek je voorzichtig een conclusie.</p>
-<section id="beschrijven-en-conclusies-trekken" class="level3">
-<h3 class="anchored" data-anchor-id="beschrijven-en-conclusies-trekken">Beschrijven en conclusies trekken</h3>
+<section id="sec-beschrijvend" class="level3">
+<h3 class="anchored" data-anchor-id="sec-beschrijvend">Beschrijven en conclusies trekken</h3>
 <p>Allereerst beschrijven we gegevens met kengetallen, zoals een centrummaat (gemiddelde of mediaan) en een spreidingsmaat (standaarddeviatie of interkwartielafstand), en met tabellen of figuren. Dit noemen we <strong>beschrijvende statistiek</strong>. Zo’n samenvatting geldt voor de gegevens die je hebt gemeten, oftewel voor je steekproef. Door die steekproef samen te vatten zie je sneller wat er in jouw gegevens gebeurt.</p>
 <p><strong>Inferentiële statistiek</strong> gaat een stap verder. Daarmee gebruik je een steekproef om iets te zeggen over een bredere populatie, bijvoorbeeld met een schatting, een betrouwbaarheidsinterval of een toets. Dat vraagt om een passende onderzoeksopzet en aannames. In dit vak oefenen we vooral beschrijven en lezen.</p>
 <p>Een gemiddelde wachttijd van vier minuten in jouw steekproef bewijst dus niet dat alle patiënten in het ziekenhuis gemiddeld vier minuten wachten. Het vat alleen de gemeten gegevens samen.</p>
 </section>
-<section id="type-gegevens" class="level3">
-<h3 class="anchored" data-anchor-id="type-gegevens">Type gegevens</h3>
+<section id="sec-type-gegevens" class="level3">
+<h3 class="anchored" data-anchor-id="sec-type-gegevens">Type gegevens</h3>
 <p>In onderzoek komen verschillende soorten gegevens voor, denk aan bloedwaarden, wachttijden, type spreekuur of antwoorden op een vragenlijst. Een <strong>variabele</strong> is een kenmerk dat je meet of registreert. Grofweg onderscheiden we <strong>categorische</strong> en <strong>numerieke</strong> variabelen. Dat onderscheid bepaalt hoe je samenvat en visualiseert, en later ook welke toets past.</p>
 <table class="caption-top table">
 <thead>
@@ -317,11 +317,11 @@ Figuur&nbsp;1.1: Een daling van gemiddelde systolische bloeddruk van 160 naar 14
 </ul>
 <p>Beide typen zijn numeriek en kun je met gemiddelde of mediaan samenvatten. Het onderscheid helpt vooral bij visualisatie: een histogram past goed bij continue gegevens, terwijl je bij weinig discrete waarden soms losse staven ziet. Later speelt dit ook mee bij de keuze van een toets.</p>
 </section>
-<section id="centrummaten" class="level3">
-<h3 class="anchored" data-anchor-id="centrummaten">Centrummaten</h3>
+<section id="sec-centrummaten" class="level3">
+<h3 class="anchored" data-anchor-id="sec-centrummaten">Centrummaten</h3>
 <p>Je kent waarschijnlijk al het idee van een gemiddelde. Misschien ken je ook de mediaan, of de modus? Een lijst losse metingen is lastig te overzien. Een <strong>centrummaat</strong> (ook wel locatiemaat) vat die lijst samen in één getal dat aangeeft waar de gegevens typisch liggen: “ongeveer hoeveel?” of “wat komt het meest voor?”. Zo kun je groepen of meetmomenten vergelijken zonder elke individuele waarde te bekijken. Denk aan de typische wachttijd op de poli, of de meest voorkomende klacht. Welke centrummaat past, hangt af van het type gegevens en van uitschieters.</p>
-<section id="gemiddelde-mediaan-modus" class="level4">
-<h4 class="anchored" data-anchor-id="gemiddelde-mediaan-modus">Gemiddelde, mediaan, modus</h4>
+<section id="sec-gemiddelde-mediaan" class="level4">
+<h4 class="anchored" data-anchor-id="sec-gemiddelde-mediaan">Gemiddelde, mediaan, modus</h4>
 <p>Op dezelfde dataset kun je drie centrummaten berekenen. Neem vijf wachttijden van 2, 3, 3, 4 en 8 minuten.</p>
 <table class="caption-top table">
 <colgroup>
@@ -357,8 +357,8 @@ Figuur&nbsp;1.1: Een daling van gemiddelde systolische bloeddruk van 160 naar 14
 <p>Bij een <strong>even</strong> aantal waarden is er geen enkele middelste. Neem dan het gemiddelde van de twee middelste na ordenen: bij 2, 3, 4, 8 is de mediaan <span class="math inline">\((3+4)/2 = 3{,}5\)</span> minuten.</p>
 <p>De <strong>modus</strong> is de meest voorkomende waarde. Komt elke waarde even vaak voor, dan is er geen modus. Komen twee of meer waarden even vaak en vaker voor dan de rest, dan zijn er meerdere modi: bij 2, 2, 5, 5, 8 zijn zowel 2 als 5 modus. Bij categorische gegevens kun je alleen de modus als centrummaat gebruiken, omdat gemiddelde en mediaan daar niet gedefinieerd zijn. Als “regulier” vaker voorkomt dan “urgent”, is regulier de modus.</p>
 </section>
-<section id="uitschieters" class="level4">
-<h4 class="anchored" data-anchor-id="uitschieters">Uitschieters</h4>
+<section id="sec-uitschieters" class="level4">
+<h4 class="anchored" data-anchor-id="sec-uitschieters">Uitschieters</h4>
 <p>Een extreme waarde beïnvloedt niet alle centrummaten even sterk. Neem opnieuw de reeks 2, 3, 3, 4, 8 (gemiddelde 4, mediaan 3, modus 3) en vervang 8 door 28, dus 2, 3, 3, 4, 28:</p>
 <ul>
 <li>som wordt 40, <strong>gemiddelde</strong> wordt 8;</li>
@@ -371,14 +371,14 @@ Figuur&nbsp;1.1: Een daling van gemiddelde systolische bloeddruk van 160 naar 14
 <section id="spreidingsmaten" class="level3">
 <h3 class="anchored" data-anchor-id="spreidingsmaten">Spreidingsmaten</h3>
 <p>Een centrummaat zegt waar de gegevens ongeveer liggen, maar niet hoe ver ze uiteenlopen. Twee groepen met hetzelfde gemiddelde of dezelfde mediaan kunnen toch heel anders zijn. In de ene groep liggen bijna alle waarden dicht bij het centrum, in de andere lopen ze sterk uiteen. Die onderlinge verschillen doen er klinisch toe. Denk aan een gemiddelde bloeddruk die “goed” lijkt, terwijl individuele patiënten sterk variëren. Daarom voeg je naast een centrummaat een <strong>spreidingsmaat</strong> toe.</p>
-<section id="spreidingsbreedte" class="level4">
-<h4 class="anchored" data-anchor-id="spreidingsbreedte">Spreidingsbreedte</h4>
+<section id="sec-spreidingsbreedte" class="level4">
+<h4 class="anchored" data-anchor-id="sec-spreidingsbreedte">Spreidingsbreedte</h4>
 <p>Hoe geef je de spreiding van een verdeling weer in een paar getallen? De eenvoudigste maat is de spreidingsbreedte: maximum − minimum. Bij 2, 3, 3, 4, 8 is dat <span class="math inline">\(8 - 2 = 6\)</span> minuten.</p>
 <p>Deze maat gebruikt alleen de twee uitersten en is gevoelig voor uitschieters. Vervang je 8 door 28, dan wordt de breedte 26. Schrijf desgewenst ook minimum en maximum apart op. Dan zie je niet alleen hoe breed het interval is, maar ook waar het ligt.</p>
 <p>De spreidingsbreedte geeft een snelle eerste indruk van het bereik: “hoe ver lopen de waarden uiteen?” Dat kan nuttig zijn bij labreferenties, of als je wilt weten of alle metingen binnen een klinisch relevant interval vallen. Voor een stabielere samenvatting van spreiding in een steekproef zijn standaarddeviatie of IQR meestal informatiever, omdat die niet alleen van twee extreme punten afhangen.</p>
 </section>
-<section id="standaarddeviatie" class="level4">
-<h4 class="anchored" data-anchor-id="standaarddeviatie">Standaarddeviatie</h4>
+<section id="sec-standaarddeviatie" class="level4">
+<h4 class="anchored" data-anchor-id="sec-standaarddeviatie">Standaarddeviatie</h4>
 <p>De <strong>standaarddeviatie</strong> beschrijft hoe ver waarnemingen rond het gemiddelde uiteenliggen, in dezelfde eenheid als de metingen. We gebruiken hier de eenvoudige formule met delen door <span class="math inline">\(n\)</span>. Elke meting heeft een <strong>afwijking</strong> tot het gemiddelde: het verschil tussen die waarde en het gemiddelde.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -402,8 +402,8 @@ Figuur&nbsp;1.2: Wachttijden 2, 3, 3, 4, 8 met gemiddelde 4. De grijze lijnen zi
 </ol>
 <p>Positieve en negatieve afwijkingen heffen elkaar zo niet op. Bij standaarddeviatie = 0 zijn alle waarden gelijk. Let op: gemiddelde ± standaarddeviatie is geen minimum en maximum. De standaarddeviatie beschrijft verschillen tussen waarnemingen, niet de onzekerheid van het gemiddelde.</p>
 </section>
-<section id="interkwartielafstand-iqr" class="level4">
-<h4 class="anchored" data-anchor-id="interkwartielafstand-iqr">Interkwartielafstand (IQR)</h4>
+<section id="sec-iqr" class="level4">
+<h4 class="anchored" data-anchor-id="sec-iqr">Interkwartielafstand (IQR)</h4>
 <p><strong>Kwartielen</strong> verdelen een geordende reeks in vier even grote delen, elk met 25% van de waarnemingen:</p>
 <ul>
 <li><span class="math inline">\(Q_1\)</span> (eerste kwartiel): 25% van de waarden is kleiner of gelijk aan <span class="math inline">\(Q_1\)</span>;</li>
@@ -447,10 +447,10 @@ Figuur&nbsp;1.4: Beide groepen gemiddeld 6 minuten; groep B ligt verder uiteen (
 </div>
 </div>
 </section>
-<section id="welke-grafiek" class="level3">
-<h3 class="anchored" data-anchor-id="welke-grafiek">Welke grafiek?</h3>
-<section id="overzicht" class="level4">
-<h4 class="anchored" data-anchor-id="overzicht">Overzicht</h4>
+<section id="sec-welke-grafiek" class="level3">
+<h3 class="anchored" data-anchor-id="sec-welke-grafiek">Welke grafiek?</h3>
+<section id="sec-grafiek-overzicht" class="level4">
+<h4 class="anchored" data-anchor-id="sec-grafiek-overzicht">Overzicht</h4>
 <p>Het type figuur moet passen bij de gegevens én bij de vraag die je wilt beantwoorden. Kies daarom eerst wat je wilt laten zien, en daarna een passend grafiektype. Bedenk ook: een grafiek vat samen en kan informatie weglaten.</p>
 <table class="caption-top table">
 <thead>
@@ -480,8 +480,8 @@ Figuur&nbsp;1.4: Beide groepen gemiddeld 6 minuten; groep B ligt verder uiteen (
 </table>
 <p>Een <strong>verdeling</strong> gaat over de waarden van één variabele. Een <strong>verband</strong> gaat over hoe twee variabelen samen variëren.</p>
 </section>
-<section id="staafdiagram-en-histogram" class="level4">
-<h4 class="anchored" data-anchor-id="staafdiagram-en-histogram">Staafdiagram en histogram</h4>
+<section id="sec-histogram" class="level4">
+<h4 class="anchored" data-anchor-id="sec-histogram">Staafdiagram en histogram</h4>
 <p>Een <strong>staafdiagram</strong> gebruik je om <strong>categorieën</strong> te vergelijken. Elke balk is één groep, bijvoorbeeld urgent of regulier spreekuur. De hoogte is meestal een aantal of percentage. Tussen de balken zit vaak ruimte, en de volgorde op de x-as mag je kiezen: alfabetisch, van groot naar klein, of een vaste klinische volgorde.</p>
 <p>Een <strong>histogram</strong> toont de <strong>verdeling van één numerieke variabele</strong>. Je deelt de getallenas in aaneengesloten intervallen (<strong>klassen</strong> of <em>bins</em>), bijvoorbeeld wachttijd 0–&lt;2, 2–&lt;4, 4–&lt;6 minuten, en telt hoeveel metingen in elke klasse vallen. De x-as is dus een getallenschaal. De volgorde ligt vast, en aangrenzende klassen raken elkaar. Er zitten geen gaten tussen de balken.</p>
 <p>Het verschil met een staafdiagram is belangrijk. Labels zoals “urgent” en “regulier” zijn geen afstanden op een meetlat. Balken tegen elkaar zetten bij categorieën maakt er nog geen histogram van. Een histogram is ook geen tijdsverloop: de x-as is de gemeten waarde (wachttijd), niet “week 1, week 2”.</p>
@@ -501,8 +501,8 @@ Figuur&nbsp;1.5: Links categorieën (staafdiagram); rechts numerieke intervallen
 </div>
 </div>
 </section>
-<section id="boxplot" class="level4">
-<h4 class="anchored" data-anchor-id="boxplot">Boxplot</h4>
+<section id="sec-boxplot" class="level4">
+<h4 class="anchored" data-anchor-id="sec-boxplot">Boxplot</h4>
 <p>Een <strong>boxplot</strong> vat een numerieke verdeling samen met kwartielen. De figuur tekent <span class="math inline">\(Q_1\)</span>, mediaan en <span class="math inline">\(Q_3\)</span> als een rechthoek met een streep ertussen, plus snorren naar de uiteinden. Neem opnieuw de wachttijden 2, 4, 4, 6, 6, 8, 8, 10:</p>
 <ul>
 <li>de <strong>box</strong> loopt van <span class="math inline">\(Q_1\)</span> tot <span class="math inline">\(Q_3\)</span> (hier 4 tot 8; de breedte is de IQR);</li>
@@ -525,12 +525,12 @@ Figuur&nbsp;1.6: Zelfde wachttijden als bij de kwartielen: box van Q1 tot Q3, li
 </div>
 </div>
 </section>
-<section id="spreidingsdiagram" class="level4">
-<h4 class="anchored" data-anchor-id="spreidingsdiagram">Spreidingsdiagram</h4>
+<section id="sec-spreidingsdiagram" class="level4">
+<h4 class="anchored" data-anchor-id="sec-spreidingsdiagram">Spreidingsdiagram</h4>
 <p>Om te kijken of twee numerieke variabelen samenhangen, gebruik je een <strong>spreidingsdiagram</strong>. Ieder punt stelt meestal één waarneming voor, bijvoorbeeld leeftijd en bloeddruk van één persoon. Je ziet zo of er een <strong>verband</strong> is: stijgen de y-waarden mee als x toeneemt? Een samenhang in de figuur bewijst nog geen oorzakelijk verband. Verbind losse personen ook niet met een lijn alsof het opeenvolgende momenten van dezelfde persoon zijn.</p>
 </section>
-<section id="lijngrafiek" class="level4">
-<h4 class="anchored" data-anchor-id="lijngrafiek">Lijngrafiek</h4>
+<section id="sec-lijngrafiek" class="level4">
+<h4 class="anchored" data-anchor-id="sec-lijngrafiek">Lijngrafiek</h4>
 <p>Een <strong>lijngrafiek</strong> toont vaak een groepsgemiddelde of andere samenvatting over meetmomenten in de tijd. Eén punt is dan een groepswaarde op één tijdstip, geen individuele patiënt. De lijn helpt het <strong>verloop</strong> te volgen. Controleer wel of de tijd op de x-as op ware schaal staat. Daarover later meer bij schaal op de assen.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -631,8 +631,8 @@ Figuur&nbsp;1.9: Zelfde dataset en gemiddelde; de balk ± standaarddeviatie is l
 </div>
 </div>
 </section>
-<section id="afgesneden-as" class="level4">
-<h4 class="anchored" data-anchor-id="afgesneden-as">Afgesneden as</h4>
+<section id="sec-afgesneden-as" class="level4">
+<h4 class="anchored" data-anchor-id="sec-afgesneden-as">Afgesneden as</h4>
 <p>De <strong>y-as</strong> bepaalt hoe groot een verschil eruitziet. Neem twee groepsgemiddelden van 145 en 150 mmHg. Het echte verschil is 5 mmHg.</p>
 <p>Begin je de y-as bij <strong>0</strong>, dan zijn beide balken ongeveer even hoog en lijkt 5 mmHg klein ten opzichte van het totaal. Begin je bij <strong>140</strong>, dan lijkt groep B “veel hoger” dan groep A, terwijl de getallen onveranderd zijn. De as is afgesneden: je ziet alleen het topje van de balken.</p>
 <p>Bij <strong>staafdiagrammen</strong> vergelijken we vooral via balklengte. Daarom is een basis bij nul meestal eerlijker. Anders overdrijft de figuur relatieve verschillen. Bij een <strong>lijngrafiek</strong> kan inzoomen juist nuttig zijn, bijvoorbeeld om een klein maar relevant verloop zichtbaar te maken. De schaal moet dan wel duidelijk in de assen en het bijschrift staan. Er is dus geen absolute regel “altijd nul”. De vraag is: past deze schaal bij wat de figuur claimt te laten zien?</p>
@@ -672,8 +672,8 @@ Figuur&nbsp;1.11: Links gelijke categorie-afstanden; rechts werkelijke tijdsafst
 </div>
 </div>
 </section>
-<section id="absoluut-en-relatief" class="level4">
-<h4 class="anchored" data-anchor-id="absoluut-en-relatief">Absoluut en relatief</h4>
+<section id="sec-absoluut-relatief" class="level4">
+<h4 class="anchored" data-anchor-id="sec-absoluut-relatief">Absoluut en relatief</h4>
 <p>Hetzelfde verschil kun je op twee manieren opschrijven. Dat verandert niet de getallen, wel de indruk die je ervan krijgt.</p>
 <p><strong>Voorbeeld 1: groei over jaren.</strong> Stel, een poli telt het aantal nieuwe verwijzingen (fictief):</p>
 <table class="caption-top table">

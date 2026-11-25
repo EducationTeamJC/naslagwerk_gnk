@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Naslagwerk Statistiek",
+    "title": "Naslagwerk Data Science & Statistiek",
     "section": "",
-    "text": "Voorwoord\nWelkom bij het naslagwerk voor het statistiekonderwijs in de bachelor Geneeskunde. In dit document vind je per vak alle informatie die ook tijdens de hoorcolleges en werkcolleges wordt aangeboden. Tijdens je bacheloropleiding kun je dit online naslagwerk blijven gebruiken om het statistiekonderwijs terug te vinden.\nDit document is nog in ontwikkeling en wordt verder aangevuld naarmate het nieuwe curriculum Geneeskunde volledig wordt ingevoerd.",
+    "text": "Voorwoord\nWelkom bij het naslagwerk voor het data science en statistiekonderwijs in de bachelor Geneeskunde. In dit document vind je per vak alle informatie die ook tijdens de hoorcolleges en werkcolleges wordt aangeboden. Tijdens je bacheloropleiding kun je dit online naslagwerk blijven gebruiken om het data science en statistiekonderwijs terug te vinden.\nDit document is nog volop in ontwikkeling en wordt verder aangevuld naarmate het nieuwe curriculum Geneeskunde volledig wordt ingevoerd.",
     "crumbs": [
       "Voorwoord"
     ]
@@ -12,9 +12,9 @@
   {
     "objectID": "index.html#opbouw-van-de-vakken",
     "href": "index.html#opbouw-van-de-vakken",
-    "title": "Naslagwerk Statistiek",
+    "title": "Naslagwerk Data Science & Statistiek",
     "section": "Opbouw van de vakken",
-    "text": "Opbouw van de vakken\n\nBasis van Gezondheid en Ziekte (Jaar 1)\n…",
+    "text": "Opbouw van de vakken\n\nBasis van Gezondheid en Ziekte (Jaar 1)\nCirculatie en Respiratie (Jaar 1)",
     "crumbs": [
       "Voorwoord"
     ]
@@ -24,7 +24,7 @@
     "href": "01-BvGZ.html",
     "title": "1  Basis van Gezondheid en Ziekte",
     "section": "",
-    "text": "1.1 Leerdoelen\nWelkom bij het statistiek deel van het vak Basis van Gezondheid en Ziekte (BvGZ)! In dit deel maak je voor het eerst kennis met statistiek in de geneeskunde en ontdek je hoe je statistiek kunt gebruiken om medische gegevens te begrijpen.\nAls arts kom je dagelijks gegevens tegen: bloedwaarden, meetresultaten en onderzoek naar nieuwe behandelingen. Statistiek helpt je deze gegevens te beschrijven en te interpreteren, zodat je ze kunt gebruiken bij het beoordelen van de gezondheid van patiënten en het nemen van medische beslissingen.\nWe beginnen met het leren lezen en beschrijven van gegevens. Voordat je conclusies kunt trekken, moet je immers eerst patronen herkennen en deze helder kunnen uitleggen. Zo leer je medische informatie kritisch te beoordelen en hierover met patiënten en collega’s te communiceren.\nWe beginnen met de leerdoelen waarop ons onderwijs is gebaseerd. Daarna volgt het naslagwerk, waarin je alles kunt terugvinden wat tijdens de hoorcolleges en werkcolleges wordt behandeld.\nTot slot willen we benadrukken dat statistiek een belangrijk hulpmiddel is in de wetenschappelijke gereedschapskist van een arts. Maar, je leert statistiek niet alleen door de theorie te bestuderen, maar vooral door deze herhaaldelijk toe te passen en te blijven oefenen. Dat kan in het begin best lastig zijn en soms frustratie opleveren. Dat is een normaal onderdeel van het leerproces. Door te oefenen, fouten te maken en hiervan te leren, ontwikkel je stap voor stap je vaardigheden (Nelson & Eliasz, 2023).\nVeel leerplezier!\nDe student kan beschrijvende statistiek, tabellen en grafieken gebruiken om data samen te vatten en de belangrijkste patronen, verschillen en trends te herkennen.",
+    "text": "1.1 Leerdoelen\nWelkom bij het data science en statistiek deel van het vak Basis van Gezondheid en Ziekte (BvGZ)! In dit deel maak je voor het eerst kennis met data science en statistiek in de geneeskunde en ontdek je hoe je beide kunt gebruiken om medische gegevens te begrijpen.\nAls arts kom je dagelijks gegevens tegen: bloedwaarden, meetresultaten en onderzoek naar nieuwe behandelingen. Daarnaast, met de opkomst van machine learning in de kliniek, zul je als arts ook te maken krijgen met AI applicaties of diagnostische predictie modellen. Data science en statistiek helpt je gegevens te beschrijven en te interpreteren en te begrijpen wat onderligt aan machine learning voorspellingen, zodat je deze informatie kunt gebruiken bij het beoordelen van de gezondheid van patiënten en het nemen van medische beslissingen.\nWe beginnen met het leren lezen en beschrijven van gegevens. Voordat je conclusies kunt trekken, moet je immers eerst patronen herkennen en deze helder kunnen uitleggen. Zo leer je medische informatie kritisch te beoordelen en hierover met patiënten en collega’s te communiceren.\nDe volgorde van dit hoofstuk is als volgt: eerst zie je de leerdoelen waarop ons onderwijs is gebaseerd. Daarna volgt het naslagwerk, waarin je alles kunt terugvinden wat tijdens de hoorcolleges en werkcolleges wordt behandeld.\nTot slot willen we benadrukken dat data science en statistiek belangrijk hulpmiddelen zijn in de wetenschappelijke gereedschapskist van een arts. Maar, je leert beide niet alleen door de theorie te bestuderen, maar vooral door deze herhaaldelijk toe te passen en te blijven oefenen. Dat kan in het begin best lastig zijn en soms frustratie opleveren. Dat is een normaal onderdeel van het leerproces. Door te oefenen, fouten te maken en hiervan te leren, ontwikkel je stap voor stap je vaardigheden (Nelson & Eliasz, 2023).\nVeel leerplezier!\nDe student kan beschrijvende statistiek, tabellen en grafieken gebruiken om data samen te vatten en de belangrijkste patronen, verschillen en trends te herkennen.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Basis van Gezondheid en Ziekte</span>"
     ]
